@@ -75,10 +75,9 @@ var searchFunc = function (path, search_id, content_id, trans) {
           }
           // 0x05. show search results
           if (isMatch) {
-            keywords.forEach(function (keyword) {
-              var regS = new RegExp(keyword, "gi");
-              orig_data_title = orig_data_title.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
-            });
+            var regS = new RegExp(keywords.join('|'), "gi");
+
+            orig_data_title = orig_data_title.replace(regS, "<span class=\"search-keyword\">$&</span>");
             str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
             var content = orig_data_content;
             if (first_occur >= 0) {
@@ -101,10 +100,7 @@ var searchFunc = function (path, search_id, content_id, trans) {
               var match_content = content.substr(start, end);
 
               // highlight all keywords
-              keywords.forEach(function (keyword) {
-                var regS = new RegExp(keyword, "gi");
-                match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
-              });
+              match_content = match_content.replace(regS, "<span class=\"search-keyword\">$&</span>");
 
               str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
             }
