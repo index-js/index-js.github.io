@@ -5,7 +5,7 @@ const searchFunc = (path, search_id, content_id, trans) => {
   const contentEle = document.getElementById(content_id)
 
   // Init Loading
-  contentEle.innerHTML = `<ul><span class='local-search-empty'>${trans.searchFirst}<span></ul>`
+  contentEle.innerHTML = `<ul><span class="local-search-empty">${trans.searchFirst}<span></ul>`
   fetch(path).then(res => {
     if (res.ok) return res.json()
     else throw [res.status, res.statusText]
@@ -42,16 +42,16 @@ const searchFunc = (path, search_id, content_id, trans) => {
       }).filter(item => item)
 
       if (filter.length === 0) {
-        return contentEle.innerHTML = `<ul><span class='local-search-empty'>${trans.searchNoResult}<span></ul>`
+        return contentEle.innerHTML = `<ul><span class="local-search-empty">${trans.searchNoResult}<span></ul>`
       } else {
         contentEle.innerHTML = '<ul class="search-result-list">' + filter.join('') + '</ul>'
       }
     })
   }).catch(err => {
     if (err[0] === 404) {
-      contentEle.innerHTML = `<ul><span class='local-search-empty'>${trans.searchFilesNotfound}<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>`
+      contentEle.innerHTML = `<ul><span class="local-search-empty">${trans.searchFilesNotfound}<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>`
     } else {
-      contentEle.innerHTML = `<ul><span class='local-search-empty'>${trans.searchServiceErrors}<span></ul>`
+      contentEle.innerHTML = `<ul><span class="local-search-empty">${trans.searchServiceErrors}<span></ul>`
     }
   })
 }

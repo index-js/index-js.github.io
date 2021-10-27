@@ -640,6 +640,7 @@ a:hover {
 
 .tools-bar {
   position: fixed;
+  z-index: 1;
   right: 2.2rem;
   bottom: 2.2rem;
 }

@@ -1,28 +1,27 @@
-// colorscheme.js
-let switchHandle = document.querySelector('#switch-color-scheme')
-let themeIcon = document.querySelector('#theme-icon')
-var html = document.documentElement
+const themeIcon = document.querySelector('#theme-icon')
 
-const switchMode = () => {
-    let attr = html.getAttribute('color-mode')
-    let colorMode = 'light'
-    if (attr === 'light') {
-        html.setAttribute('color-mode', 'dark')
-        themeIcon.classList = 'iconfont icon-sun'
+const switchMode = (colorMode = 'light') => {
+    if (colorMode === 'light') {
         colorMode = 'dark'
     } else {
-        html.setAttribute('color-mode', 'light')
-        themeIcon.classList = 'iconfont icon-moon'
         colorMode = 'light'
     }
+    changeColor(colorMode)
+}
+
+const changeColor = (colorMode = 'light') => {
+    if (colorMode === 'light') {
+        themeIcon.className = 'iconfont icon-moon'
+    } else {
+        themeIcon.className = 'iconfont icon-sun'
+    }
+
+    html.setAttribute('color-mode', colorMode)
     localStorage.setItem('color-mode', colorMode)
 }
 
-switchHandle.addEventListener('click', switchMode, false)
+document.querySelector('#switch-color-scheme').addEventListener('click', () => {
+    switchMode(html.getAttribute('color-mode'))
+}, false)
 
-const currColorMode = localStorage.getItem('color-mode')
-if (currColorMode === 'light') {
-    themeIcon.classList = 'iconfont icon-moon'
-} else {
-    themeIcon.classList = 'iconfont icon-sun'
-}
+changeColor(localStorage.getItem('color-mode'))
