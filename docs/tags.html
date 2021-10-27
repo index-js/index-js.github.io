@@ -37,27 +37,17 @@
 <link rel="stylesheet" href="/css/comments.css">
 
 
-  <!-- jquery3.3.1 -->
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-
-  <!-- fancybox -->
-  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
-  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
-  
-<script src="js/fancybox.js"></script>
-
-
   
 
   <script>
-    var html = document.documentElement
-    const colorMode = localStorage.getItem('color-mode')
-    if (colorMode) {
-      document.documentElement.setAttribute('color-mode', colorMode)
-    }
+    let colorMode = localStorage.getItem('color-mode') || 'light'
+
+    const html = document.documentElement
+    html.setAttribute('color-mode', colorMode)
+    localStorage.setItem('color-mode', colorMode)
   </script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="杨林的博客" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="杨林的博客" type="application/atom+xml">
 </head>
 
 
@@ -96,27 +86,22 @@
   </div>
 </div>
 
+<script>
+const navs = document.querySelectorAll('.nav-item')
+const pagePath = location.pathname.replace(/\/$/, '') || '/'
 
-<script src="js/activeNav.js"></script>
-
+for(let nav of navs) {
+  let navPath = nav.getAttribute('data-path')
+  if (navPath && navPath === pagePath) {
+    nav.className = 'nav-item active'
+  }
+}
+</script>
 
 
       <div class="flex-container">
         <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
 <!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
-
-<!-- LaTex Display -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  }
-};
-</script>
 
 
   <!-- 标签页 url形式：https://yoursite/tags/ -->
@@ -136,39 +121,6 @@ MathJax = {
   
 
       </div>
-      <div class="footer">
-  <div class="social">
-    <ul>
-      
-        <li>
-          <a title="github" target="_blank" rel="noopener" href="https://github.com/index-js">
-            <i class="iconfont icon-github"></i>
-          </a>
-        </li>
-      
-        <li>
-          <a title="email" href="mailto:i@yangl.in">
-            <i class="iconfont icon-envelope"></i>
-          </a>
-        </li>
-      
-        <li>
-          <a title="rss" href="/atom.xml">
-            <i class="iconfont icon-rss"></i>
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-  
-    <div class="footer-more">
-      
-        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
-        
-    </div>
-  
-</div>
-
 
       <div class="tools-bar">
         <div class="back-to-top tools-bar-item hidden">
@@ -178,7 +130,7 @@ MathJax = {
 </div>
 
 
-<script src="js/backtotop.js"></script>
+<script src="/js/backtotop.js"></script>
 
 
 
@@ -210,7 +162,7 @@ MathJax = {
     </div>
   </div>
   
-<script src="js/search.js"></script>
+<script src="/js/search.js"></script>
 
 
   <script type="text/javascript">
@@ -266,7 +218,7 @@ MathJax = {
   </div>
 
   
-<script src="js/colorscheme.js"></script>
+<script src="/js/colorscheme.js"></script>
 
 
 
@@ -291,13 +243,50 @@ MathJax = {
         
       </div>
     </div>
-    
-<script src="js/shares.js"></script>
-
+    <script>
+      document.querySelector('#share-icon').addEventListener('click', () => {
+        const cls = document.querySelector('.share-content').classList
+        cls.contains('hidden') ? cls.remove('hidden') : cls.add('hidden')
+      }, false)
+    </script>
   
 
 
       </div>
+
+      <div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/index-js">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="email" href="mailto:i@yangl.in">
+            <i class="iconfont icon-envelope"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="rss" href="/atom.xml">
+            <i class="iconfont icon-rss"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
     </div>
   </body>
 </html>

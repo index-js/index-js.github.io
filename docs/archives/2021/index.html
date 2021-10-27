@@ -29,35 +29,25 @@
 
   <!-- hexo site css -->
   
-<link rel="stylesheet" href="../../css/color-scheme.css">
-<link rel="stylesheet" href="../../css/base.css">
-<link rel="stylesheet" href="../../iconfont/iconfont.css">
-<link rel="stylesheet" href="../../css/github-markdown.css">
-<link rel="stylesheet" href="../../css/highlight.css">
-<link rel="stylesheet" href="../../css/comments.css">
-
-
-  <!-- jquery3.3.1 -->
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-
-  <!-- fancybox -->
-  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
-  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
-  
-<script src="../../js/fancybox.js"></script>
+<link rel="stylesheet" href="/css/color-scheme.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/github-markdown.css">
+<link rel="stylesheet" href="/css/highlight.css">
+<link rel="stylesheet" href="/css/comments.css">
 
 
   
 
   <script>
-    var html = document.documentElement
-    const colorMode = localStorage.getItem('color-mode')
-    if (colorMode) {
-      document.documentElement.setAttribute('color-mode', colorMode)
-    }
+    let colorMode = localStorage.getItem('color-mode') || 'light'
+
+    const html = document.documentElement
+    html.setAttribute('color-mode', colorMode)
+    localStorage.setItem('color-mode', colorMode)
   </script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="杨林的博客" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="杨林的博客" type="application/atom+xml">
 </head>
 
 
@@ -96,9 +86,17 @@
   </div>
 </div>
 
+<script>
+const navs = document.querySelectorAll('.nav-item')
+const pagePath = location.pathname.replace(/\/$/, '') || '/'
 
-<script src="../../js/activeNav.js"></script>
-
+for(let nav of navs) {
+  let navPath = nav.getAttribute('data-path')
+  if (navPath && navPath === pagePath) {
+    nav.className = 'nav-item active'
+  }
+}
+</script>
 
 
       <div class="flex-container">
@@ -120,7 +118,7 @@
       <div class="post-item" title="Hello World">
         <div class="time-m-d">10-26</div>
         <div class="title">
-          <a href="../../2021/10/26/hello-world/">
+          <a href="/2021/10/26/hello-world/">
             <span>Hello World</span>
           </a>
         </div>
@@ -130,39 +128,6 @@
 </div>
 
       </div>
-      <div class="footer">
-  <div class="social">
-    <ul>
-      
-        <li>
-          <a title="github" target="_blank" rel="noopener" href="https://github.com/index-js">
-            <i class="iconfont icon-github"></i>
-          </a>
-        </li>
-      
-        <li>
-          <a title="email" href="mailto:i@yangl.in">
-            <i class="iconfont icon-envelope"></i>
-          </a>
-        </li>
-      
-        <li>
-          <a title="rss" href="/atom.xml">
-            <i class="iconfont icon-rss"></i>
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-  
-    <div class="footer-more">
-      
-        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
-        
-    </div>
-  
-</div>
-
 
       <div class="tools-bar">
         <div class="back-to-top tools-bar-item hidden">
@@ -172,7 +137,7 @@
 </div>
 
 
-<script src="../../js/backtotop.js"></script>
+<script src="/js/backtotop.js"></script>
 
 
 
@@ -204,7 +169,7 @@
     </div>
   </div>
   
-<script src="../../js/search.js"></script>
+<script src="/js/search.js"></script>
 
 
   <script type="text/javascript">
@@ -260,7 +225,7 @@
   </div>
 
   
-<script src="../../js/colorscheme.js"></script>
+<script src="/js/colorscheme.js"></script>
 
 
 
@@ -271,6 +236,40 @@
 
 
       </div>
+
+      <div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/index-js">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="email" href="mailto:i@yangl.in">
+            <i class="iconfont icon-envelope"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="rss" href="/atom.xml">
+            <i class="iconfont icon-rss"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
     </div>
   </body>
 </html>
