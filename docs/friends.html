@@ -39,14 +39,6 @@
 
   
 
-  <script>
-    let colorMode = localStorage.getItem('color-mode') || 'light'
-
-    const html = document.documentElement
-    html.setAttribute('color-mode', colorMode)
-    localStorage.setItem('color-mode', colorMode)
-  </script>
-
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="杨林的博客" type="application/atom+xml">
 </head>
 
@@ -74,7 +66,7 @@
           <a href="/archives/">归档</a>
         </li>
       
-        <li class="nav-item" data-path="/friends">
+        <li class="nav-item active" data-path="/friends">
           <a href="/friends">朋友</a>
         </li>
       
@@ -85,18 +77,6 @@
     </ul>
   </div>
 </div>
-
-<script>
-const navs = document.querySelectorAll('.nav-item')
-const pagePath = location.pathname.replace(/\/$/, '') || '/'
-
-for(let nav of navs) {
-  let navPath = nav.getAttribute('data-path')
-  if (navPath && navPath === pagePath) {
-    nav.className = 'nav-item active'
-  }
-}
-</script>
 
 
       <div class="flex-container">
@@ -137,6 +117,8 @@ for(let nav of navs) {
       
     </div>
   </div>
+  
+
   
 
   

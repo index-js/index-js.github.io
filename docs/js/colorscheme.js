@@ -20,8 +20,6 @@ const changeColor = (colorMode = 'light') => {
     localStorage.setItem('color-mode', colorMode)
 }
 
-document.querySelector('#switch-color-scheme').addEventListener('click', () => {
-    switchMode(html.getAttribute('color-mode'))
-}, false)
-
+// Restore ColorMode
 changeColor(localStorage.getItem('color-mode'))
+document.querySelector('#switch-color-scheme').addEventListener('click', () => switchMode(html.getAttribute('color-mode')), false)

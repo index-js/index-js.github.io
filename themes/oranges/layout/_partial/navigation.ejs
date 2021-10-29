@@ -13,10 +13,11 @@
   <div class="navbar">
     <ul>
       <%
+        var pathname = ('/' + path).replace(/((index)?\.html)$/, '')
         for(let item of theme.navbar) {
           if (item.enable) {
       %>
-        <li class="nav-item" data-path="<%- item.path %>">
+        <li class="nav-item<%- pathname == item.path ? ' active' : '' %>" data-path="<%- item.path %>">
           <a href="<%- item.path %>"><%- item.name %></a>
         </li>
       <%
@@ -26,15 +27,3 @@
     </ul>
   </div>
 </div>
-
-<script>
-const navs = document.querySelectorAll('.nav-item')
-const pagePath = location.pathname.replace(/\/$/, '') || '/'
-
-for(let nav of navs) {
-  let navPath = nav.getAttribute('data-path')
-  if (navPath && navPath === pagePath) {
-    nav.className = 'nav-item active'
-  }
-}
-</script>

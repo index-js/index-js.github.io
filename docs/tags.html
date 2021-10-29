@@ -39,14 +39,6 @@
 
   
 
-  <script>
-    let colorMode = localStorage.getItem('color-mode') || 'light'
-
-    const html = document.documentElement
-    html.setAttribute('color-mode', colorMode)
-    localStorage.setItem('color-mode', colorMode)
-  </script>
-
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="杨林的博客" type="application/atom+xml">
 </head>
 
@@ -86,18 +78,6 @@
   </div>
 </div>
 
-<script>
-const navs = document.querySelectorAll('.nav-item')
-const pagePath = location.pathname.replace(/\/$/, '') || '/'
-
-for(let nav of navs) {
-  let navPath = nav.getAttribute('data-path')
-  if (navPath && navPath === pagePath) {
-    nav.className = 'nav-item active'
-  }
-}
-</script>
-
 
       <div class="flex-container">
         <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
@@ -110,6 +90,8 @@ for(let nav of navs) {
       
     </div>
   </div>
+  
+
   
 
   
