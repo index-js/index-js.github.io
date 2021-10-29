@@ -1,5 +1,6 @@
 // back to top js
 let scrollTop = 0
+var html = document.documentElement
 
 function isHidden() {
   scrollTop = html.scrollTop || document.body.scrollTop

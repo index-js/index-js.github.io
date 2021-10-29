@@ -2,6 +2,7 @@
 let catalog = document.getElementById('catalog');
 let catalogTopHeight = catalog.offsetTop;
 let tocElement = document.querySelector('.catalog-content')
+var html = document.documentElement
 
 // 是否固定目录
 function changePos() {

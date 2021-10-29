@@ -1,4 +1,5 @@
 const themeIcon = document.querySelector('#theme-icon')
+var html = document.documentElement
 
 const switchMode = (colorMode = 'light') => {
     if (colorMode === 'light') {
