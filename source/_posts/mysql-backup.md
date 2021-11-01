@@ -6,7 +6,7 @@ tags:
     - MySQL
     - Docker
 ---
-### 导出备份
+## 导出备份
 mysqldump -u{root} -p{password} {database_name} > backup.sql
 ```sh
 --opt 默认
@@ -17,8 +17,8 @@ mysqldump -u{root} -p{password} {database_name} > backup.sql
 --triggers 备份触发器
 ```
 
-### 备份恢复
+## 备份恢复
 mysql -h{host} -P{port} -u{root} -p{password} -C < backup.sql
 
-### 在Docker容器外执行
+## 在Docker容器外执行
 docker exec -i {container_name} mysql/mysqldump ...

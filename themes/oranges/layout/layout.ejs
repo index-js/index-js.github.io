@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html lang="<%= config.language %>" color-mode="light">
+<html lang="<%= config.language %>">
 
   <%- partial('_partial/header') %>
 
   <body>
-    <div id="app">
-      <%- partial('_partial/navigation') %>
+    <%- partial('_partial/navigation') %>
 
-      <div class="flex-container">
-        <%- body %>
-      </div>
+    <div class="flex-container">
+      <%- body %>
+    </div>
 
-      <div class="tools-bar">
-        <%- partial('_partial/backtotop') %>
+    <%- partial('_partial/footer') %>
 
-        <%- partial('_partial/search') %>
+    <div class="tools-bar">
+      <%- partial('_partial/backtotop') %>
 
-        <%- partial('_partial/colorscheme') %>
+      <%- partial('_partial/search') %>
 
-        <%- partial('_partial/shares') %>
-      </div>
+      <%- partial('_partial/colorscheme') %>
 
-      <%- partial('_partial/footer') %>
+      <%- partial('_partial/shares') %>
     </div>
   </body>
 </html>

@@ -1,16 +1,15 @@
 const themeIcon = document.querySelector('#theme-icon')
-var html = document.documentElement
 
-const switchMode = (colorMode = 'light') => {
+const switchMode = () => {
     if (colorMode === 'light') {
         colorMode = 'dark'
     } else {
         colorMode = 'light'
     }
-    changeColor(colorMode)
+    changeIcon()
 }
 
-const changeColor = (colorMode = 'light') => {
+const changeIcon = () => {
     if (colorMode === 'light') {
         themeIcon.className = 'iconfont icon-moon'
     } else {
@@ -21,6 +20,7 @@ const changeColor = (colorMode = 'light') => {
     localStorage.setItem('color-mode', colorMode)
 }
 
-// Restore ColorMode
-changeColor(localStorage.getItem('color-mode'))
-document.querySelector('#switch-color-scheme').addEventListener('click', () => switchMode(html.getAttribute('color-mode')), false)
+document.querySelector('#switch-color-scheme').addEventListener('click', switchMode, false)
+
+// Init Change Icon
+changeIcon()

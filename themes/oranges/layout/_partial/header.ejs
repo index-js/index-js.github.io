@@ -56,4 +56,12 @@
     'static/css/comments.css'])
   %>
 
+<script>
+  // colorMode
+  let colorMode = localStorage.getItem('color-mode') || 'light'
+
+  const html = document.documentElement
+  html.setAttribute('color-mode', colorMode)
+</script>
+
 </head>

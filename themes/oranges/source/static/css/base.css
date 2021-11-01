@@ -4,25 +4,23 @@
   box-sizing: border-box;
 }
 
-html, body {
+html{
   height: 100%;
   font-size: 10px;
+}
+body {
+  min-height: 100%;
   letter-spacing: 0.01rem;
   background-color: var(--bg-body);
   transition: color 400ms ease-in-out 0s, background-color 400ms ease-in-out 0s;
-  font-family: Consolas, "Liberation Mono", Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif
+  font-family: Consolas, "Liberation Mono", Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 body.hidden {
   overflow: hidden;
   padding-right: 6px;
-}
-
-#app {
-  min-height: 100%;
-  padding-bottom: 100px;
-  position: relative;
-  margin: 0 auto;
 }
 
 /*控制整个滚动条*/
@@ -56,12 +54,8 @@ a:hover {
 }
 
 .flex-container {
-  /* min-height: calc(100vh - 290px); */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: calc(100vw - 100%);
-  /*transition: all 0.3s ease;*/
+  flex: 1;
+  transition: all 0.3s ease;
 }
 
 .header {
@@ -316,10 +310,6 @@ a:hover {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding-top: 30px;
   font-size: 1.2rem;
   color: #aaa;

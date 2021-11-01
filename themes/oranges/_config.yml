@@ -22,10 +22,7 @@ favicon:
   touch_icon: /static/images/favicon.ico
 
 # 用户头像与昵称
-avatar:
-  author_photo: /static/images/avatar.jpeg
-  author_nickname: 杨林的博客
-  path: /
+avatar: /static/images/avatar.jpeg
 
 # CNZZ统计
 cnzz:
@@ -69,9 +66,9 @@ navbar:
     path: /tags/
     key: tags
   -
-    name: 朋友
+    name: 参考网站
     enable: true
-    path: /friends/
+    path: /website/
     key: friends
   -
     name: 关于
@@ -93,13 +90,11 @@ friends:
   # site: 地址
   # meta: 描述
   -
-    nickname: Zcheng
-    site: https://zcheng.site/
-    meta:
+    nickname: QuickRef
+    site: https://quickref.me/
   -
-    nickname: Hexo
-    site: https://hexo.io/
-    meta:
+    nickname: 菜鸟教程
+    site: https://www.runoob.com/
 
 # 页脚信息
 footer:

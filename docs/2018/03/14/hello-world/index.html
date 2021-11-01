@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN" color-mode="light">
+<html lang="zh-CN">
 
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="keywords" content="" />
+  <meta name="keywords" content="杨林,博客,JavaScript,Node.js,前端" />
   <meta name="author" content="杨林" />
-  <meta name="description" content="" />
+  <meta name="description" content="一个程序员博客" />
   
   
   <title>
@@ -37,13 +37,20 @@
 <link rel="stylesheet" href="/static/css/comments.css">
 
 
+<script>
+  // colorMode
+  let colorMode = localStorage.getItem('color-mode') || 'light'
+
+  const html = document.documentElement
+  html.setAttribute('color-mode', colorMode)
+</script>
+
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="杨林的博客" type="application/atom+xml">
 </head>
 
 
   <body>
-    <div id="app">
-      <div class="header">
+    <div class="header">
   <div class="avatar">
     <a href="/">
       <!-- 头像取消懒加载，添加no-lazy -->
@@ -51,28 +58,30 @@
         <img src="/static/images/avatar.jpeg" alt="">
       
     </a>
-    <div class="nickname"><a href="/">杨林的博客</a></div>
+    <div class="nickname">
+      <a href="/">杨林的博客</a>
+    </div>
   </div>
   <div class="navbar">
     <ul>
       
-        <li class="nav-item" data-path="/">
+        <li class="nav-item ">
           <a href="/">主页</a>
         </li>
       
-        <li class="nav-item" data-path="/archives/">
+        <li class="nav-item ">
           <a href="/archives/">归档</a>
         </li>
       
-        <li class="nav-item" data-path="/tags/">
+        <li class="nav-item ">
           <a href="/tags/">标签</a>
         </li>
       
-        <li class="nav-item" data-path="/friends/">
-          <a href="/friends/">朋友</a>
+        <li class="nav-item ">
+          <a href="/website/">参考网站</a>
         </li>
       
-        <li class="nav-item" data-path="/about/">
+        <li class="nav-item ">
           <a href="/about/">关于</a>
         </li>
       
@@ -81,8 +90,8 @@
 </div>
 
 
-      <div class="flex-container">
-        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+    <div class="flex-container">
+      <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
 <!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
 
@@ -161,10 +170,56 @@
   </div>
 
 
-      </div>
+    </div>
 
-      <div class="tools-bar">
-        <div class="back-to-top tools-bar-item hidden">
+    <div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/index-js">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="email" href="mailto:i@yangl.in">
+            <i class="iconfont icon-envelope"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="rss" href="/atom.xml">
+            <i class="iconfont icon-rss"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+      
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">蜀ICP备2021019109号-1</a>
+      
+    </div>
+  
+
+  
+    <div class="footer-more">
+      <script src="https://s9.cnzz.com/z_stat.php?id=1280512941&online=1&show=line"></script>
+    </div>
+  
+</div>
+
+
+    <div class="tools-bar">
+      <div class="back-to-top tools-bar-item hidden">
   <a href="javascript: void(0)">
     <i class="iconfont icon-chevronup"></i>
   </a>
@@ -175,7 +230,7 @@
 
 
 
-        
+      
   <div class="search-icon tools-bar-item" id="search-icon">
     <a href="javascript: void(0)">
       <i class="iconfont icon-search"></i>
@@ -251,7 +306,7 @@
 
 
 
-        
+      
   <div class="tools-bar-item theme-icon" id="switch-color-scheme">
     <a href="javascript: void(0)">
       <i id="theme-icon" class="iconfont icon-moon"></i>
@@ -265,7 +320,7 @@
 
 
 
-        
+      
   
     <div class="share-icon tools-bar-item">
       <a href="javascript: void(0)" id="share-icon">
@@ -292,53 +347,6 @@
     </script>
   
 
-
-      </div>
-
-      <div class="footer">
-  <div class="social">
-    <ul>
-      
-        <li>
-          <a title="github" target="_blank" rel="noopener" href="https://github.com/index-js">
-            <i class="iconfont icon-github"></i>
-          </a>
-        </li>
-      
-        <li>
-          <a title="email" href="mailto:i@yangl.in">
-            <i class="iconfont icon-envelope"></i>
-          </a>
-        </li>
-      
-        <li>
-          <a title="rss" href="/atom.xml">
-            <i class="iconfont icon-rss"></i>
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-  
-    <div class="footer-more">
-      
-        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
-      
-    </div>
-  
-    <div class="footer-more">
-      
-        <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">蜀ICP备2021019109号-1</a>
-      
-    </div>
-  
-
-  
-    <div class="footer-more">
-      <script src="https://s9.cnzz.com/z_stat.php?id=1280512941&online=1&show=line"></script>
-    </div>
-  
-</div>
 
     </div>
   </body>

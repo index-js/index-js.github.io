@@ -5,8 +5,8 @@
 # Site
 title: 杨林的博客
 subtitle: ''
-description: ''
-keywords:
+description: '一个程序员博客'
+keywords: '杨林,博客,JavaScript,Node.js,前端'
 author: 杨林
 language: zh-CN
 timezone: ''
@@ -47,14 +47,11 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: '  '
   wrap: true
   hljs: false
 prismjs:
   enable: false
-  preprocess: true
-  line_number: true
-  tab_replace: ''
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -91,6 +88,7 @@ updated_option: 'mtime'
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
+  - .nojekyll
 exclude:
 ignore:
 
