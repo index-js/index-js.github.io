@@ -18,12 +18,12 @@
 # 网站图标
 favicon:
   enable: true
-  icon: /images/favicon.ico
-  touch_icon: /images/favicon.ico
+  icon: /static/images/favicon.ico
+  touch_icon: /static/images/favicon.ico
 
 # 用户头像与昵称
 avatar:
-  author_photo: /images/avatar.jpeg
+  author_photo: /static/images/avatar.jpeg
   author_nickname: 杨林的博客
   path: /
 
