@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>杨林的博客</title>
-  <icon>https://index-js.github.io/icon.png</icon>
+  
   
   <link href="https://index-js.github.io/atom.xml" rel="self"/>
   
@@ -23,13 +23,12 @@
     <published>2021-10-25T02:03:00.000Z</published>
     <updated>2021-10-25T02:03:00.000Z</updated>
     
+    <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> timestamp = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&#x27;2020-01-01&#x27;</span>).getTime()</span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Intl</span>.DateTimeFormat(<span class="string">&#x27;zh-u-ca-chinese&#x27;</span>, &#123; <span class="attr">dateStyle</span>: <span class="string">&#x27;full&#x27;</span> &#125;).format(timestamp)</span><br><span class="line"><span class="comment">// &#x27;2019己亥年腊月初七星期三&#x27;</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Intl</span>.DateTimeFormat(<span class="string">&#x27;zh-u-ca-chinese&#x27;</span>, &#123; <span class="attr">dateStyle</span>: <span class="string">&#x27;long&#x27;</span> &#125;).format(timestamp)</span><br><span class="line"><span class="comment">// &#x27;2019己亥年腊月初七&#x27;</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Intl</span>.DateTimeFormat(<span class="string">&#x27;zh-u-ca-chinese&#x27;</span>, &#123; <span class="attr">dateStyle</span>: <span class="string">&#x27;medium&#x27;</span> &#125;).format(timestamp)</span><br><span class="line"><span class="comment">// &#x27;2019年腊月初七&#x27;</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Intl</span>.DateTimeFormat(<span class="string">&#x27;zh-u-ca-chinese&#x27;</span>, &#123; <span class="attr">dateStyle</span>: <span class="string">&#x27;short&#x27;</span> &#125;).format(timestamp)</span><br><span class="line"><span class="comment">// &#x27;2019/12/7&#x27;</span></span><br></pre></td></tr></table></figure><p>更多用法查看<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat">MDN WEB</a></p>]]></content>
+    
     
       
       
-        
-        
-    <summary type="html">&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
+    <summary type="html">&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;l</summary>
       
     
     
@@ -46,14 +45,13 @@
     <published>2021-09-19T01:28:00.000Z</published>
     <updated>2021-09-19T01:28:00.000Z</updated>
     
+    <content type="html"><![CDATA[<p>新用户直接授权，然后wx.login()获取js_code，后端接口会报错  </p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">errcode</span>: <span class="number">40029</span>, <span class="attr">errmsg</span>: <span class="string">&#x27;invalid code, hints: [ req_id: 1iiCP0yFe-KWV ]&#x27;</span> &#125;</span><br></pre></td></tr></table></figure><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li>bindgetuserinfo之前，需要先调用一下wx.login()，确定session_key</li><li>bindgetuserinfo回调里面，调用wx.login()，然后通过wx.getUserInfo()获取和回调一样的信息</li></ol>]]></content>
+    
     
       
       
-        
-        
     <summary type="html">&lt;p&gt;新用户直接授权，然后wx.login()获取js_code，后端接口会报错  &lt;/p&gt;
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
-        
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;b</summary>
       
     
     
@@ -74,13 +72,12 @@
     <published>2021-09-15T08:21:00.000Z</published>
     <updated>2021-09-15T08:21:00.000Z</updated>
     
+    <content type="html"><![CDATA[<p><a href="https://lbs.qq.com/webApi/component/componentGuide/componentPicker">腾讯地图-地图选点组件</a><br><a href="https://lbs.amap.com/api/lightmap/guide/picker/">高德地图-选址组件</a></p>]]></content>
+    
     
       
       
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://lbs.qq.com/webApi/component/componentGuide/componentPicker&quot;&gt;腾讯地图-地图选点组件&lt;/a&gt;&lt;br&gt;&lt;a</summary>
-        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://lbs.qq.com/webApi/component/componentGuide/componentPicker&quot;&gt;腾讯地图-地图选点组件&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://lbs.amap.com/api/lightma</summary>
       
     
     
@@ -101,16 +98,15 @@
     <published>2021-09-02T07:02:00.000Z</published>
     <updated>2021-09-02T07:02:00.000Z</updated>
     
+    <content type="html"><![CDATA[<blockquote><p>在iOS下，new Date(‘2020-02-02 01:01’)这种格式，会返回Invalid Date</p></blockquote><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol><li>替换为年/月/日 时-分-秒格式，兼容其它PC和手机浏览器，如new Date(‘2020/02/02 01:01’)</li><li>替换中间空格为字母T，也是兼容的，如new Date(‘2020-02-02T01:01’)</li></ol><p>注意new Date(‘2020/02/02T01:01’)也为Invalid Date，混用🙅‍♀️</p>]]></content>
+    
     
       
       
-        
-        
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;在iOS下，new Date(‘2020-02-02 01:01’)这种格式，会返回Invalid Date&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;解决办法&quot;&gt;&lt;a href=&quot;#解决办法&quot; class=&quot;headerlink&quot;</summary>
-        
+&lt;h2 id=&quot;解决办法&quot;&gt;&lt;a href=&quot;#解决办法&quot; class=&quot;headerlink&quot; ti</summary>
       
     
     
@@ -129,13 +125,12 @@
     <published>2021-08-24T08:04:00.000Z</published>
     <updated>2021-08-24T08:04:00.000Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p><a href="https://www.caniuse.com/">Can I use，兼容性自查工具</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript">MDN，JavaScript文档</a><br><a href="https://www.runoob.com/html/html5-intro.html">菜鸟教程</a><br><a href="https://www.iconfont.cn/">Iconfront图标</a></p><h2 id="Vue相关"><a href="#Vue相关" class="headerlink" title="Vue相关"></a>Vue相关</h2><p><a href="https://element.eleme.cn/#/zh-CN/component/installatio">ElementUI，管理端UI</a><br><a href="https://vant-contrib.gitee.io/vant/#/zh-CN/">VantUI，移动端和小程序UI</a></p><h2 id="小程序相关"><a href="#小程序相关" class="headerlink" title="小程序相关"></a>小程序相关</h2><p><a href="https://uniapp.dcloud.io/">Uniapp框架</a><br><a href="http://mpvue.com/">Mpvue框架</a><br><a href="https://wepyjs.gitee.io/wepy-docs/2.x/#/">Wepy框架</a></p>]]></content>
+    
     
       
       
-        
-        
-    <summary type="html">&lt;h2 id=&quot;基础&quot;&gt;&lt;a href=&quot;#基础&quot; class=&quot;headerlink&quot; title=&quot;基础&quot;&gt;&lt;/a&gt;基础&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.caniuse.com/&quot;&gt;Can I use，兼容性自查工具&lt;/a&gt;&lt;br&gt;&lt;a</summary>
-        
+    <summary type="html">&lt;h2 id=&quot;基础&quot;&gt;&lt;a href=&quot;#基础&quot; class=&quot;headerlink&quot; title=&quot;基础&quot;&gt;&lt;/a&gt;基础&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.caniuse.com/&quot;&gt;Can I use，兼容性自查工具&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;h</summary>
       
     
     
@@ -154,13 +149,12 @@
     <published>2021-08-24T07:29:00.000Z</published>
     <updated>2021-08-24T07:29:00.000Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="正则千分位"><a href="#正则千分位" class="headerlink" title="正则千分位"></a>正则千分位</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;1234567890.012345&#x27;</span>.replace(<span class="regexp">/\B(?=(\d&#123;3&#125;)+(\.|$))/g</span>, <span class="string">&#x27;,&#x27;</span>)</span><br><span class="line"><span class="string">&quot;1,234,567,890.012,345&quot;</span></span><br><span class="line"><span class="comment">// 此处有个小问题，小数位大于3，也会加上分隔符</span></span><br></pre></td></tr></table></figure><h2 id="ES函数，JS原生方法"><a href="#ES函数，JS原生方法" class="headerlink" title="ES函数，JS原生方法"></a>ES函数，JS原生方法</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString">Number.toLocaleString()，详见MDN Web</a></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>(<span class="string">&#x27;1234567890.012345&#x27;</span>).toLocaleString()</span><br><span class="line"><span class="string">&quot;1,234,567,890.012&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 有些浏览器默认最大3个小数位，解决办法是maximumFractionDigits(取值0-20)</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="string">&#x27;1234567890.012345&#x27;</span>).toLocaleString(<span class="literal">undefined</span>, &#123; <span class="attr">maximumFractionDigits</span>: <span class="number">10</span> &#125;)</span><br><span class="line"><span class="string">&quot;1,234,567,890.012345&quot;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
     
       
       
-        
-        
-    <summary type="html">&lt;h2 id=&quot;正则千分位&quot;&gt;&lt;a href=&quot;#正则千分位&quot; class=&quot;headerlink&quot; title=&quot;正则千分位&quot;&gt;&lt;/a&gt;正则千分位&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-        
+    <summary type="html">&lt;h2 id=&quot;正则千分位&quot;&gt;&lt;a href=&quot;#正则千分位&quot; class=&quot;headerlink&quot; title=&quot;正则千分位&quot;&gt;&lt;/a&gt;正则千分位&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;p</summary>
       
     
     
@@ -177,16 +171,15 @@
     <published>2019-09-04T14:54:00.000Z</published>
     <updated>2019-09-04T14:54:00.000Z</updated>
     
+    <content type="html"><![CDATA[<p>现实中，因为工作原因，见过很多人的代码，感触良多</p><p>现在编码，基本都是复制党，导致很多编程问题。</p><p>我的看法是，即使代码思路不好，代码格式应该要处理好，这样至少看起来舒服一点</p><h2 id="错误示范"><a href="#错误示范" class="headerlink" title="错误示范"></a>错误示范</h2><h3 id="❌-多余代码直接去掉，不要注释"><a href="#❌-多余代码直接去掉，不要注释" class="headerlink" title="❌ 多余代码直接去掉，不要注释"></a>❌ 多余代码直接去掉，不要注释</h3><p>影响美观，还占空间，既然是多余的，就没有必要保留。</p><p>这里指的开始拉进来，后面又没用的代码。</p><p>说明注释、示例注释倒是越多越好，格式也是需要规范，多行注释和单行注释也是不同的。</p><h3 id="❌-不要顺便加上打印Console"><a href="#❌-不要顺便加上打印Console" class="headerlink" title="❌ 不要顺便加上打印Console"></a>❌ 不要顺便加上打印Console</h3><p>这个在前端很常见，也是多余需要去掉的。</p><p>调试的时候测试可理解，可是用完之后就应该去掉了，更高级的用法是打断点调试。</p><h2 id="正确示范"><a href="#正确示范" class="headerlink" title="正确示范"></a>正确示范</h2><h3 id="👍-代码简洁高效"><a href="#👍-代码简洁高效" class="headerlink" title="👍 代码简洁高效"></a>👍 代码简洁高效</h3><p>命名、格式、简化、注释</p><p>适当空格和换行也是一门技术活</p><h3 id="👍-文件拆分和模块复用"><a href="#👍-文件拆分和模块复用" class="headerlink" title="👍 文件拆分和模块复用"></a>👍 文件拆分和模块复用</h3><p>复用不仅包含函数，前端组件也是需要单独拎出来，这样好处多多</p><h3 id="👍-应用新的技术和框架，提高效率"><a href="#👍-应用新的技术和框架，提高效率" class="headerlink" title="👍 应用新的技术和框架，提高效率"></a>👍 应用新的技术和框架，提高效率</h3><p>如ES6、ES7，直接改变写法风格</p>]]></content>
+    
     
       
       
-        
-        
     <summary type="html">&lt;p&gt;现实中，因为工作原因，见过很多人的代码，感触良多&lt;/p&gt;
 &lt;p&gt;现在编码，基本都是复制党，导致很多编程问题。&lt;/p&gt;
 &lt;p&gt;我的看法是，即使代码思路不好，代码格式应该要处理好，这样至少看起来舒服一点&lt;/p&gt;
-&lt;h2 id=&quot;错误示范&quot;&gt;&lt;a href=&quot;#错误示范&quot;</summary>
-        
+&lt;h2 id=&quot;错误示范&quot;&gt;&lt;a href=&quot;#错误示范&quot; cla</summary>
       
     
     
@@ -205,13 +198,12 @@
     <published>2019-09-04T14:32:00.000Z</published>
     <updated>2019-09-04T14:32:00.000Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="Callback-回调函数"><a href="#Callback-回调函数" class="headerlink" title="Callback - 回调函数"></a>Callback - 回调函数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设存在A，B两个函数，有先后顺序</span></span><br><span class="line">A = <span class="function">() =&gt;</span> &#123;&#125;</span><br><span class="line">B = <span class="function">() =&gt;</span> &#123;&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// 正常情况下，顺序执行即可</span></span><br><span class="line">A()  <span class="comment">// A执行</span></span><br><span class="line">B()  <span class="comment">// B执行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 当A为异步函数(JavaScript很常见，网上一大堆例子)</span></span><br><span class="line"><span class="comment">// 如果想顺序执行，设C为两个函数共同体</span></span><br><span class="line">C(B) =&gt; &#123;</span><br><span class="line">  A()  <span class="comment">// A的内容体</span></span><br><span class="line">  B()  <span class="comment">// 最后执行B</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 把函数B当做一个变量，当A全部执行完毕，才执行函数B</span></span><br><span class="line"><span class="comment">// 这个就是回调函数</span></span><br><span class="line">C = A() =&gt; B()</span><br></pre></td></tr></table></figure><h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><p>Promise是一种函数体，原型链包含then和catch</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A、B函数想要顺序执行，先把A函数Promisify，封装成一个Promise</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 设D为A的Promise化的函数</span></span><br><span class="line">D = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  A()</span><br><span class="line">  resolve()  <span class="comment">// 执行完毕，退出</span></span><br><span class="line">  reject()  <span class="comment">// 出错</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当A函数执行完之后，再执行B，语义化也很好理解</span></span><br><span class="line">D().then(B).catch()</span><br></pre></td></tr></table></figure><h2 id="Async"><a href="#Async" class="headerlink" title="Async"></a>Async</h2><p>Async和await是联合起来使用的，基于Promise</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">A = <span class="keyword">async</span> () =&gt; &#123;&#125;</span><br><span class="line">B = <span class="keyword">async</span> () =&gt; &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里的A和B都是Promise</span></span><br><span class="line"><span class="comment">// 顺序执行，只需</span></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> A()</span><br><span class="line">  <span class="keyword">await</span> B()</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>  <span class="comment">// 可以直接return</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 这里有个问题就是，如果内容函数使用了async，外部函数也必须使用async或者promise，否则会接收不到返回值</span></span><br></pre></td></tr></table></figure><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本文基于作者熟悉的内容编写，未包含yield</p><p>JavaScript的这三种形态变化，其实都是语法糖，内容都是基于事件回调，因为JavaScript是单线程的</p>]]></content>
+    
     
       
       
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Callback-回调函数&quot;&gt;&lt;a href=&quot;#Callback-回调函数&quot; class=&quot;headerlink&quot; title=&quot;Callback - 回调函数&quot;&gt;&lt;/a&gt;Callback - 回调函数&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
-        
+    <summary type="html">&lt;h2 id=&quot;Callback-回调函数&quot;&gt;&lt;a href=&quot;#Callback-回调函数&quot; class=&quot;headerlink&quot; title=&quot;Callback - 回调函数&quot;&gt;&lt;/a&gt;Callback - 回调函数&lt;/h2&gt;&lt;figure class=&quot;highlight </summary>
       
     
     
@@ -228,13 +220,12 @@
     <published>2019-09-02T06:32:00.000Z</published>
     <updated>2019-09-02T06:32:00.000Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="Docker-amp-Docker-Compose"><a href="#Docker-amp-Docker-Compose" class="headerlink" title="Docker &amp; Docker-Compose"></a>Docker &amp; Docker-Compose</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载Docker</span></span><br><span class="line">curl -fsSL https://get.docker.com/ | sh</span><br><span class="line"><span class="comment"># 下载最新Docker-Compose</span></span><br><span class="line">curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-`uname -s`-`uname -m` -o /usr/<span class="built_in">local</span>/bin/docker-compose chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line"><span class="comment"># 创建目录</span></span><br><span class="line">mkdir -p /home/docker</span><br><span class="line"><span class="comment"># 安装nginx / mysql / node / phpmyadmin</span></span><br></pre></td></tr></table></figure><h2 id="Vsftpd"><a href="#Vsftpd" class="headerlink" title="Vsftpd"></a>Vsftpd</h2><ol><li>apt update</li><li>apt install -y vsftpd</li><li>Append to /etc/vsftp.conf</li><li>Add User</li><li>chomd -R 777 /home/docker/nginx/html</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置ftp用户密码</span></span><br><span class="line">$ useradd -m uftp</span><br><span class="line">$ passwd uftp</span><br></pre></td></tr></table></figure><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改配置文件</span></span><br><span class="line">write_enable=YES</span><br><span class="line"></span><br><span class="line">userlist_file=/etc/vsftpd.user_list</span><br><span class="line">userlist_enable=YES</span><br><span class="line">userlist_deny=NO</span><br><span class="line"></span><br><span class="line">pasv_promiscuous=YES</span><br><span class="line">pasv_address=0.0.0.0</span><br><span class="line">local_root=/home/docker/nginx/html</span><br></pre></td></tr></table></figure>]]></content>
+    
     
       
       
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Docker-amp-Docker-Compose&quot;&gt;&lt;a href=&quot;#Docker-amp-Docker-Compose&quot; class=&quot;headerlink&quot; title=&quot;Docker &amp;amp; Docker-Compose&quot;&gt;&lt;/a&gt;Docker</summary>
-        
+    <summary type="html">&lt;h2 id=&quot;Docker-amp-Docker-Compose&quot;&gt;&lt;a href=&quot;#Docker-amp-Docker-Compose&quot; class=&quot;headerlink&quot; title=&quot;Docker &amp;amp; Docker-Compose&quot;&gt;&lt;/a&gt;Docker &amp;a</summary>
       
     
     
@@ -257,17 +248,16 @@
     <published>2019-07-22T02:28:00.000Z</published>
     <updated>2019-07-22T02:28:00.000Z</updated>
     
+    <content type="html"><![CDATA[<blockquote><p>参考网站</p></blockquote><p><a href="https://www.cnblogs.com/mylinux/p/5488991.html">在vmware里面免费安装纯净的xp虚拟机</a></p><h2 id="操作流程"><a href="#操作流程" class="headerlink" title="操作流程"></a>操作流程</h2><ol><li>安装VMware</li><li>下载Windows镜像包</li><li>在VM中安装，提示输入密钥时，直接忽略然后下一步</li><li><a href="http://www.windows7en.com/xp/3374.html">XP激活码</a></li></ol>]]></content>
+    
     
       
       
-        
-        
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;参考网站&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/mylinux/p/5488991.html&quot;&gt;在vmware里面免费安装纯净的xp虚拟机&lt;/a&gt;&lt;/p&gt;
-&lt;h2</summary>
-        
+&lt;h2 id=&quot;操作流</summary>
       
     
     
@@ -286,13 +276,12 @@
     <published>2019-07-18T04:03:00.000Z</published>
     <updated>2019-07-18T04:03:00.000Z</updated>
     
+    <content type="html"><![CDATA[<h3 id="导出备份"><a href="#导出备份" class="headerlink" title="导出备份"></a>导出备份</h3><p>mysqldump -u{root} -p{password} {database_name} &gt; backup.sql</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">--opt 默认</span><br><span class="line">--default-character-set=utf8mb4 默认格式</span><br><span class="line">-C 传输压缩</span><br><span class="line">--skip-disable-keys 避免导入重置自增ID</span><br><span class="line">--single-transaction 避免锁表</span><br><span class="line">--triggers 备份触发器</span><br></pre></td></tr></table></figure><h3 id="备份恢复"><a href="#备份恢复" class="headerlink" title="备份恢复"></a>备份恢复</h3><p>mysql -h{host} -P{port} -u{root} -p{password} -C &lt; backup.sql</p><h3 id="在Docker容器外执行"><a href="#在Docker容器外执行" class="headerlink" title="在Docker容器外执行"></a>在Docker容器外执行</h3><p>docker exec -i {container_name} mysql/mysqldump …</p>]]></content>
+    
     
       
       
-        
-        
-    <summary type="html">&lt;h3 id=&quot;导出备份&quot;&gt;&lt;a href=&quot;#导出备份&quot; class=&quot;headerlink&quot; title=&quot;导出备份&quot;&gt;&lt;/a&gt;导出备份&lt;/h3&gt;&lt;p&gt;mysqldump -u{root} -p{password} {database_name} &amp;gt;</summary>
-        
+    <summary type="html">&lt;h3 id=&quot;导出备份&quot;&gt;&lt;a href=&quot;#导出备份&quot; class=&quot;headerlink&quot; title=&quot;导出备份&quot;&gt;&lt;/a&gt;导出备份&lt;/h3&gt;&lt;p&gt;mysqldump -u{root} -p{password} {database_name} &amp;gt; backup.sq</summary>
       
     
     
@@ -311,13 +300,13 @@
     <published>2018-11-11T12:53:00.000Z</published>
     <updated>2018-11-11T12:53:00.000Z</updated>
     
+    <content type="html"><![CDATA[<p>带车牌整车照片，受损部位远近照片 ，车架号，行驶证，驾驶证，车主身份证银行卡<br>碰撞物远近照片，环境照片</p>]]></content>
+    
     
       
       
-        
-        
-    <summary type="html">&lt;p&gt;带车牌整车照片，受损部位远近照片</summary>
-        
+    <summary type="html">&lt;p&gt;带车牌整车照片，受损部位远近照片 ，车架号，行驶证，驾驶证，车主身份证银行卡&lt;br&gt;碰撞物远近照片，环境照片&lt;/p&gt;
+</summary>
       
     
     
@@ -336,16 +325,15 @@
     <published>2018-11-07T10:18:00.000Z</published>
     <updated>2018-11-07T10:18:00.000Z</updated>
     
+    <content type="html"><![CDATA[<blockquote><p>参考网站</p></blockquote><p><a href="https://hub.docker.com/">Docker Hub，Docker容器平台</a><br><a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Docker Practice，Dockerfile最佳实践</a>  </p><h2 id="Shell安装"><a href="#Shell安装" class="headerlink" title="Shell安装"></a>Shell安装</h2><p><a href="https://get.docker.com/">https://get.docker.com/</a></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># This script is meant for quick &amp; easy install via:</span></span><br><span class="line">$ curl -fsSL get.docker.com -o get-docker.sh</span><br><span class="line">$ sh get-docker.sh</span><br></pre></td></tr></table></figure><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>帮助: &nbsp; &nbsp;docker [command] –help </p><h3 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h3><p>查看镜像：docker images<br>查看容器：docker ps [-a]<br>拉取镜像：docker pull  </p><h3 id="Dockerfile相关"><a href="#Dockerfile相关" class="headerlink" title="Dockerfile相关"></a>Dockerfile相关</h3><p>创建镜像：docker build -t [ContainerName] .<br>镜像发布：docker login + docker push</p><h3 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h3><p>删除容器：docker rm [-f]<br>删除镜像：docker rmi [-f]<br>删除卷：&nbsp; docker volume rm [-f]  </p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Delete all containers</span></span><br><span class="line">$ docker rm $(docker ps -a -q)</span><br><span class="line"><span class="comment"># Delete all images</span></span><br><span class="line">$ docker rmi $(docker images -q)</span><br><span class="line"><span class="comment"># Delete all volumes</span></span><br><span class="line">$ docker volume rm $(docker volume ls -q)</span><br></pre></td></tr></table></figure><h3 id="查看状态、清理"><a href="#查看状态、清理" class="headerlink" title="查看状态、清理"></a>查看状态、清理</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker system df</span><br><span class="line">$ docker system prune [-a]</span><br></pre></td></tr></table></figure><h3 id="示例-MySQL"><a href="#示例-MySQL" class="headerlink" title="示例 - MySQL"></a>示例 - MySQL</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull mysql:5.7</span><br><span class="line"><span class="comment"># docker images查看</span></span><br><span class="line">docker run --name=mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=<span class="variable">$&#123;PASSWORD&#125;</span> -d mysql:5.7</span><br><span class="line"><span class="comment"># docker ps检查</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入容器执行命令</span></span><br><span class="line">docker <span class="built_in">exec</span> -it mysql sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开启远程授权</span></span><br><span class="line"><span class="comment"># grant all privileges on 库名.表名 to &#x27;用户名&#x27;@&#x27;IP地址&#x27; identified by &#x27;密码&#x27; with grant option;</span></span><br><span class="line"><span class="comment"># flush privileges;</span></span><br><span class="line"></span><br><span class="line">&gt; mysql -uroot -p<span class="variable">$&#123;PASSWORD&#125;</span></span><br><span class="line">&gt; grant all privileges on *.* to <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;%&#x27;</span> identified by <span class="string">&#x27;$&#123;PASSWORD&#125;&#x27;</span> with grant option;</span><br><span class="line">&gt; flush privileges;</span><br><span class="line">&gt; <span class="built_in">exit</span>;</span><br></pre></td></tr></table></figure>]]></content>
+    
     
       
       
-        
-        
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;参考网站&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://hub.docker.com/&quot;&gt;Docker Hub，Docker容器平台&lt;/a&gt;&lt;br&gt;&lt;a</summary>
-        
+&lt;p&gt;&lt;a href=&quot;https://hub.docker.com/&quot;&gt;Docker Hub，Docker容器平台&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://docs.docker.com/de</summary>
       
     
     
@@ -366,16 +354,15 @@
     <published>2018-08-21T04:26:00.000Z</published>
     <updated>2018-08-21T04:26:00.000Z</updated>
     
+    <content type="html"><![CDATA[<blockquote><p>本文主要谈谈游戏对小孩子心智的影响</p></blockquote><p>不怎么打游戏的我，最近对游戏有点上瘾。一个常见的情况就是玩游戏的小孩子越来越多，我觉得游戏对他们的心智有不好的影响，特别是现在流行的一些大型手游。现在不说手机对他们眼睛的物理伤害，就谈谈游戏对他们心智的影响。</p><p>这要从玩吃鸡《绝地求生》手游开始说起，游戏场景就不多介绍了，毕竟不是推销游戏，而且腾讯的游戏也不用我们推销。在游戏过程中，有一次见到队友互相攻击，还一直说要把队友炸死，这是一个小孩子的声音(游戏中没有需要必须伤害队友的规定)。还有一次，一个熟人，不知道是玩的次数多了，还是怎么了，在队友受伤的情况下，不仅不救，还去伤害，虽然最后还是救了，我也遇到过这种队友。还有一例，就是我自己，在游戏开场等待时间，老是去攻击别人。</p><p>上述3种行为，在游戏中并没有不符合规则，还有游戏本来就具有攻击性，而且可能也是半开玩笑的玩法。可是注意一下，在现实中，这种事是完全不能允许的。如果小孩子对这种事接触太多，必然对他们心智造成潜移默化的影响。人之初，性本善，人还是应该从善良的心开始，在心智尚未成熟以前，少接触一些暴力因素。</p><p>总之，建议还是不要让小孩子玩游戏，少玩手机，这对他们有益无害。因为玩手机会上瘾，玩游戏也会上瘾。</p><p>以上，是我自己的想法，如有雷同，纯属巧合。如果对我的看法有什么不同的想法，可以与我讨论。</p>]]></content>
+    
     
       
       
-        
-        
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;本文主要谈谈游戏对小孩子心智的影响&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;不怎么打游戏的我，最近对游戏有点上瘾。一个常见的情况就是玩游戏的小孩子越来越多，我觉得游戏对他们的心智有不好的影响，特别是现在流行的一些大型手游。现在不说手机对他们眼睛的</summary>
-        
       
     
     
@@ -394,14 +381,13 @@
     <published>2018-03-14T05:07:00.000Z</published>
     <updated>2018-03-14T05:07:00.000Z</updated>
     
+    <content type="html"><![CDATA[<p>内容</p>]]></content>
+    
     
       
       
-        
-        
     <summary type="html">&lt;p&gt;内容&lt;/p&gt;
 </summary>
-        
       
     
     

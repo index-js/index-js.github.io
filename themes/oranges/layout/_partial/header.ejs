@@ -56,16 +56,4 @@
     'css/comments.css'])
   %>
 
-  <% if(theme.gtag.enable) { %>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<%- theme.gtag.gtagkey %>"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', '<%- theme.gtag.gtagkey %>');
-    </script>
-  <% } %>
-
 </head>

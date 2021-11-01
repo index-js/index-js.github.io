@@ -37,8 +37,6 @@
 <link rel="stylesheet" href="../../../../css/comments.css">
 
 
-  
-
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="杨林的博客" type="application/atom+xml">
 </head>
 
@@ -180,9 +178,21 @@
     
       <div class="comments-container">
         
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
+  <div id="vcomments"></div>
 
-
+  <script>
+    new Valine({
+      el: '#vcomments',
+      appId: 'gxUGOlvmRdJDF7uhm9hQS44B-gzGzoHsz',
+      appKey: '369PuooqB9swyor4RiJttTxz',
+      placeholder: 'Welcome!',
+      avatar: 'retro',
+      requiredFields: 'nick,mail',
+      lang: 'zh-CN'
+    })
+  </script>
 
 
       </div>
@@ -352,13 +362,19 @@
     <div class="footer-more">
       
         <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
-        
+      
     </div>
   
     <div class="footer-more">
       
         <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">蜀ICP备2021019109号-1</a>
-        
+      
+    </div>
+  
+
+  
+    <div class="footer-more">
+      <script src="https://s9.cnzz.com/z_stat.php?id=1280512941&online=1&show=line"></script>
     </div>
   
 </div>

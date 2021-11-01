@@ -16,7 +16,13 @@
         <a href="<%- item.path %>"><%- item.name %></a>
       <% } else { %>
         <%- item.name %>
-      <% } %>  
+      <% } %>
+    </div>
+  <% } %>
+
+  <% if(theme.cnzz.enable) { %>
+    <div class="footer-more">
+      <script src="<%- theme.cnzz.url %>"></script>
     </div>
   <% } %>
 </div>
