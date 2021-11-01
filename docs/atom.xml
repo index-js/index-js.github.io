@@ -6,7 +6,7 @@
   <link href="https://index-js.github.io/atom.xml" rel="self"/>
   
   <link href="https://index-js.github.io/"/>
-  <updated>2021-10-26T15:03:49.615Z</updated>
+  <updated>2021-10-25T02:03:00.000Z</updated>
   <id>https://index-js.github.io/</id>
   
   <author>
@@ -17,18 +17,390 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://index-js.github.io/2021/10/26/hello-world/"/>
-    <id>https://index-js.github.io/2021/10/26/hello-world/</id>
-    <published>2021-10-26T15:03:49.615Z</published>
-    <updated>2021-10-26T15:03:49.615Z</updated>
+    <title>JS原生获取农历新写法</title>
+    <link href="https://index-js.github.io/2021/10/25/js-date-lunar/"/>
+    <id>https://index-js.github.io/2021/10/25/js-date-lunar/</id>
+    <published>2021-10-25T02:03:00.000Z</published>
+    <updated>2021-10-25T02:03:00.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wx.login获取session_key失败</title>
+    <link href="https://index-js.github.io/2021/09/19/wx-login-error/"/>
+    <id>https://index-js.github.io/2021/09/19/wx-login-error/</id>
+    <published>2021-09-19T01:28:00.000Z</published>
+    <updated>2021-09-19T01:28:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;新用户直接授权，然后wx.login()获取js_code，后端接口会报错  &lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
+    
+    <category term="前端" scheme="https://index-js.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="小程序" scheme="https://index-js.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>H5地图选点组件，不用开发直接跳转调用</title>
+    <link href="https://index-js.github.io/2021/09/15/mobile-map-picker/"/>
+    <id>https://index-js.github.io/2021/09/15/mobile-map-picker/</id>
+    <published>2021-09-15T08:21:00.000Z</published>
+    <updated>2021-09-15T08:21:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://lbs.qq.com/webApi/component/componentGuide/componentPicker&quot;&gt;腾讯地图-地图选点组件&lt;/a&gt;&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
+    
+    <category term="前端" scheme="https://index-js.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="H5" scheme="https://index-js.github.io/tags/H5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS机型new Date问题</title>
+    <link href="https://index-js.github.io/2021/09/02/ios-date-bug/"/>
+    <id>https://index-js.github.io/2021/09/02/ios-date-bug/</id>
+    <published>2021-09-02T07:02:00.000Z</published>
+    <updated>2021-09-02T07:02:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;在iOS下，new Date(‘2020-02-02 01:01’)这种格式，会返回Invalid Date&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;解决办法&quot;&gt;&lt;a href=&quot;#解决办法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
+    
+    <category term="前端" scheme="https://index-js.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端工具网站</title>
+    <link href="https://index-js.github.io/2021/08/24/tool-web/"/>
+    <id>https://index-js.github.io/2021/08/24/tool-web/</id>
+    <published>2021-08-24T08:04:00.000Z</published>
+    <updated>2021-08-24T08:04:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;基础&quot;&gt;&lt;a href=&quot;#基础&quot; class=&quot;headerlink&quot; title=&quot;基础&quot;&gt;&lt;/a&gt;基础&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.caniuse.com/&quot;&gt;Can I use，兼容性自查工具&lt;/a&gt;&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
+    
+    <category term="前端" scheme="https://index-js.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript千分位</title>
+    <link href="https://index-js.github.io/2021/08/24/thousand-digit/"/>
+    <id>https://index-js.github.io/2021/08/24/thousand-digit/</id>
+    <published>2021-08-24T07:29:00.000Z</published>
+    <updated>2021-08-24T07:29:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;正则千分位&quot;&gt;&lt;a href=&quot;#正则千分位&quot; class=&quot;headerlink&quot; title=&quot;正则千分位&quot;&gt;&lt;/a&gt;正则千分位&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>编程规范(个人见解)</title>
+    <link href="https://index-js.github.io/2019/09/04/coding-spec/"/>
+    <id>https://index-js.github.io/2019/09/04/coding-spec/</id>
+    <published>2019-09-04T14:54:00.000Z</published>
+    <updated>2019-09-04T14:54:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;现实中，因为工作原因，见过很多人的代码，感触良多&lt;/p&gt;
+&lt;p&gt;现在编码，基本都是复制党，导致很多编程问题。&lt;/p&gt;
+&lt;p&gt;我的看法是，即使代码思路不好，代码格式应该要处理好，这样至少看起来舒服一点&lt;/p&gt;
+&lt;h2 id=&quot;错误示范&quot;&gt;&lt;a href=&quot;#错误示范&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Coding" scheme="https://index-js.github.io/tags/Coding/"/>
+    
+    <category term="编程" scheme="https://index-js.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Callback，Promise，Async</title>
+    <link href="https://index-js.github.io/2019/09/04/callback-promise-async/"/>
+    <id>https://index-js.github.io/2019/09/04/callback-promise-async/</id>
+    <published>2019-09-04T14:32:00.000Z</published>
+    <updated>2019-09-04T14:32:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Callback-回调函数&quot;&gt;&lt;a href=&quot;#Callback-回调函数&quot; class=&quot;headerlink&quot; title=&quot;Callback - 回调函数&quot;&gt;&lt;/a&gt;Callback - 回调函数&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+    <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务器部署，Docker &amp; Vsftpd</title>
+    <link href="https://index-js.github.io/2019/09/02/server-deploy/"/>
+    <id>https://index-js.github.io/2019/09/02/server-deploy/</id>
+    <published>2019-09-02T06:32:00.000Z</published>
+    <updated>2019-09-02T06:32:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Docker-amp-Docker-Compose&quot;&gt;&lt;a href=&quot;#Docker-amp-Docker-Compose&quot; class=&quot;headerlink&quot; title=&quot;Docker &amp;amp; Docker-Compose&quot;&gt;&lt;/a&gt;Docker</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Docker" scheme="https://index-js.github.io/tags/Docker/"/>
+    
+    <category term="Ubuntu" scheme="https://index-js.github.io/tags/Ubuntu/"/>
+    
+    <category term="FTP" scheme="https://index-js.github.io/tags/FTP/"/>
+    
+    <category term="Docker Compose" scheme="https://index-js.github.io/tags/Docker-Compose/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VMware安装XP系统(附激活方法)</title>
+    <link href="https://index-js.github.io/2019/07/22/vmware-install-windows/"/>
+    <id>https://index-js.github.io/2019/07/22/vmware-install-windows/</id>
+    <published>2019-07-22T02:28:00.000Z</published>
+    <updated>2019-07-22T02:28:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;参考网站&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/mylinux/p/5488991.html&quot;&gt;在vmware里面免费安装纯净的xp虚拟机&lt;/a&gt;&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+    <category term="VMware" scheme="https://index-js.github.io/tags/VMware/"/>
+    
+    <category term="Windows" scheme="https://index-js.github.io/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL备份</title>
+    <link href="https://index-js.github.io/2019/07/18/mysql-backup/"/>
+    <id>https://index-js.github.io/2019/07/18/mysql-backup/</id>
+    <published>2019-07-18T04:03:00.000Z</published>
+    <updated>2019-07-18T04:03:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;导出备份&quot;&gt;&lt;a href=&quot;#导出备份&quot; class=&quot;headerlink&quot; title=&quot;导出备份&quot;&gt;&lt;/a&gt;导出备份&lt;/h3&gt;&lt;p&gt;mysqldump -u{root} -p{password} {database_name} &amp;gt;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Docker" scheme="https://index-js.github.io/tags/Docker/"/>
+    
+    <category term="MySQL" scheme="https://index-js.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>太平洋车险理赔材料</title>
+    <link href="https://index-js.github.io/2018/11/11/cpic-data/"/>
+    <id>https://index-js.github.io/2018/11/11/cpic-data/</id>
+    <published>2018-11-11T12:53:00.000Z</published>
+    <updated>2018-11-11T12:53:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;带车牌整车照片，受损部位远近照片</summary>
+        
+      
+    
+    
+    
+    
+    <category term="太平洋保险" scheme="https://index-js.github.io/tags/%E5%A4%AA%E5%B9%B3%E6%B4%8B%E4%BF%9D%E9%99%A9/"/>
+    
+    <category term="CPIC" scheme="https://index-js.github.io/tags/CPIC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu使用Docker</title>
+    <link href="https://index-js.github.io/2018/11/07/docker-in-ubuntu/"/>
+    <id>https://index-js.github.io/2018/11/07/docker-in-ubuntu/</id>
+    <published>2018-11-07T10:18:00.000Z</published>
+    <updated>2018-11-07T10:18:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;参考网站&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://hub.docker.com/&quot;&gt;Docker Hub，Docker容器平台&lt;/a&gt;&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Docker" scheme="https://index-js.github.io/tags/Docker/"/>
+    
+    <category term="Ubuntu" scheme="https://index-js.github.io/tags/Ubuntu/"/>
+    
+    <category term="MySQL" scheme="https://index-js.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论游戏对心智的影响</title>
+    <link href="https://index-js.github.io/2018/08/21/game-affect-mind/"/>
+    <id>https://index-js.github.io/2018/08/21/game-affect-mind/</id>
+    <published>2018-08-21T04:26:00.000Z</published>
+    <updated>2018-08-21T04:26:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文主要谈谈游戏对小孩子心智的影响&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;不怎么打游戏的我，最近对游戏有点上瘾。一个常见的情况就是玩游戏的小孩子越来越多，我觉得游戏对他们的心智有不好的影响，特别是现在流行的一些大型手游。现在不说手机对他们眼睛的</summary>
+        
+      
+    
+    
+    
+    
+    <category term="游戏" scheme="https://index-js.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+    <category term="Game" scheme="https://index-js.github.io/tags/Game/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第一篇文章-测试</title>
+    <link href="https://index-js.github.io/2018/03/14/hello-world/"/>
+    <id>https://index-js.github.io/2018/03/14/hello-world/</id>
+    <published>2018-03-14T05:07:00.000Z</published>
+    <updated>2018-03-14T05:07:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;内容&lt;/p&gt;
+</summary>
         
       
     

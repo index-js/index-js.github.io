@@ -11,6 +11,11 @@
   
   <title>
     
+      MySQL备份 
+      
+      
+      |
+    
      杨林的博客
   </title>
 
@@ -24,12 +29,12 @@
 
   <!-- hexo site css -->
   
-<link rel="stylesheet" href="css/color-scheme.css">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="iconfont/iconfont.css">
-<link rel="stylesheet" href="css/github-markdown.css">
-<link rel="stylesheet" href="css/highlight.css">
-<link rel="stylesheet" href="css/comments.css">
+<link rel="stylesheet" href="../../../../css/color-scheme.css">
+<link rel="stylesheet" href="../../../../css/base.css">
+<link rel="stylesheet" href="../../../../iconfont/iconfont.css">
+<link rel="stylesheet" href="../../../../css/github-markdown.css">
+<link rel="stylesheet" href="../../../../css/highlight.css">
+<link rel="stylesheet" href="../../../../css/comments.css">
 
 
   
@@ -91,15 +96,118 @@
   
 
   
-    <!-- 关于页 url形式：https://yoursite/404/ -->
-      <div class="container about-index">
-        <div class="markdown-body">
-          <h3 id="404-Not-Found"><a href="#404-Not-Found" class="headerlink" title="404 Not Found"></a>404 Not Found</h3>
-        </div>
-      </div>
-  
 
   
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">MySQL备份</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          2019-07-18 12:03:00
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签"></i>
+                
+                <span class="span--tag">
+                  <a href="../../../../tags/Docker/" title="Docker">
+                    <b>#</b> Docker
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="../../../../tags/MySQL/" title="MySQL">
+                    <b>#</b> MySQL
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h3 id="导出备份"><a href="#导出备份" class="headerlink" title="导出备份"></a>导出备份</h3><p>mysqldump -u{root} -p{password} {database_name} &gt; backup.sql</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">--opt 默认</span><br><span class="line">--default-character-set=utf8mb4 默认格式</span><br><span class="line">-C 传输压缩</span><br><span class="line">--skip-disable-keys 避免导入重置自增ID</span><br><span class="line">--single-transaction 避免锁表</span><br><span class="line">--triggers 备份触发器</span><br></pre></td></tr></table></figure>
+
+<h3 id="备份恢复"><a href="#备份恢复" class="headerlink" title="备份恢复"></a>备份恢复</h3><p>mysql -h{host} -P{port} -u{root} -p{password} -C &lt; backup.sql</p>
+<h3 id="在Docker容器外执行"><a href="#在Docker容器外执行" class="headerlink" title="在Docker容器外执行"></a>在Docker容器外执行</h3><p>docker exec -i {container_name} mysql/mysqldump …</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="../../../../2018/11/11/cpic-data/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              2019-07-18 12:03:00
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="标签"></i>
+                    
+                    <span class="span--tag">
+                      <a href="../../../../tags/Docker/" title="Docker">
+                        <b>#</b> Docker
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="../../../../tags/MySQL/" title="MySQL">
+                        <b>#</b> MySQL
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="../../22/vmware-install-windows/" target="_self">
+                <span>下一页</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%87%BA%E5%A4%87%E4%BB%BD"><span class="toc-text">导出备份</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E4%BB%BD%E6%81%A2%E5%A4%8D"><span class="toc-text">备份恢复</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8Docker%E5%AE%B9%E5%99%A8%E5%A4%96%E6%89%A7%E8%A1%8C"><span class="toc-text">在Docker容器外执行</span></a></li></ol>
+    </div>
+  </div>
+
+  
+<script src="../../../../js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+      </div>
+    
+  </div>
+
 
       </div>
 
@@ -111,7 +219,7 @@
 </div>
 
 
-<script src="js/backtotop.js"></script>
+<script src="../../../../js/backtotop.js"></script>
 
 
 
@@ -143,7 +251,7 @@
     </div>
   </div>
   
-<script src="js/search.js"></script>
+<script src="../../../../js/search.js"></script>
 
 
   <script type="text/javascript">
@@ -199,7 +307,7 @@
   </div>
 
   
-<script src="js/colorscheme.js"></script>
+<script src="../../../../js/colorscheme.js"></script>
 
 
 
@@ -213,12 +321,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' +  + '&url=' + https%3A%2F%2Findex-js.github.io%2F404.html + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + MySQL%E5%A4%87%E4%BB%BD + '&url=' + https%3A%2F%2Findex-js.github.io%2F2019%2F07%2F18%2Fmysql-backup%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://index-js.github.io/404.html" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://index-js.github.io/2019/07/18/mysql-backup/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         

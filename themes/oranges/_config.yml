@@ -86,22 +86,22 @@ navbar:
   -
     name: 分类
     enable: false
-    path: /categories
+    path: /categories/
     key: categories
   -
     name: 标签
-    enable: false
-    path: /tags
+    enable: true
+    path: /tags/
     key: tags
   -
     name: 朋友
     enable: true
-    path: /friends
+    path: /friends/
     key: friends
   -
     name: 关于
     enable: true
-    path: /about
+    path: /about/
     key: about
 
 # 文章目录
@@ -153,6 +153,9 @@ footer:
     -
       name: Theme by Oranges | Powered by Hexo
       path: https://github.com/zchengsite/hexo-theme-oranges
+    - 
+      name: 蜀ICP备2021019109号-1
+      path: https://beian.miit.gov.cn/
 
 # 文章搜索
 search:

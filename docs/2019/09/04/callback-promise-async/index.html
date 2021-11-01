@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="杨林" />
+  <meta name="description" content="" />
+  
+  
+  <title>
+    
+      Callback，Promise，Async 
+      
+      
+      |
+    
+     杨林的博客
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="../../../../css/color-scheme.css">
+<link rel="stylesheet" href="../../../../css/base.css">
+<link rel="stylesheet" href="../../../../iconfont/iconfont.css">
+<link rel="stylesheet" href="../../../../css/github-markdown.css">
+<link rel="stylesheet" href="../../../../css/highlight.css">
+<link rel="stylesheet" href="../../../../css/comments.css">
+
+
+  
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="杨林的博客" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img src="/images/avatar.jpeg" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">杨林的博客</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">主页</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">归档</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">标签</a>
+        </li>
+      
+        <li class="nav-item" data-path="/friends/">
+          <a href="/friends/">朋友</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">关于</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">Callback，Promise，Async</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          2019-09-04 22:32:00
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签"></i>
+                
+                <span class="span--tag">
+                  <a href="../../../../tags/JavaScript/" title="JavaScript">
+                    <b>#</b> JavaScript
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="Callback-回调函数"><a href="#Callback-回调函数" class="headerlink" title="Callback - 回调函数"></a>Callback - 回调函数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设存在A，B两个函数，有先后顺序</span></span><br><span class="line">A = <span class="function">() =&gt;</span> &#123;&#125;</span><br><span class="line">B = <span class="function">() =&gt;</span> &#123;&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// 正常情况下，顺序执行即可</span></span><br><span class="line">A()  <span class="comment">// A执行</span></span><br><span class="line">B()  <span class="comment">// B执行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 当A为异步函数(JavaScript很常见，网上一大堆例子)</span></span><br><span class="line"><span class="comment">// 如果想顺序执行，设C为两个函数共同体</span></span><br><span class="line">C(B) =&gt; &#123;</span><br><span class="line">  A()  <span class="comment">// A的内容体</span></span><br><span class="line">  B()  <span class="comment">// 最后执行B</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 把函数B当做一个变量，当A全部执行完毕，才执行函数B</span></span><br><span class="line"><span class="comment">// 这个就是回调函数</span></span><br><span class="line">C = A() =&gt; B()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><p>Promise是一种函数体，原型链包含then和catch</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A、B函数想要顺序执行，先把A函数Promisify，封装成一个Promise</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 设D为A的Promise化的函数</span></span><br><span class="line">D = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  A()</span><br><span class="line">  resolve()  <span class="comment">// 执行完毕，退出</span></span><br><span class="line">  reject()  <span class="comment">// 出错</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当A函数执行完之后，再执行B，语义化也很好理解</span></span><br><span class="line">D().then(B).catch()</span><br></pre></td></tr></table></figure>
+
+<h2 id="Async"><a href="#Async" class="headerlink" title="Async"></a>Async</h2><p>Async和await是联合起来使用的，基于Promise</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">A = <span class="keyword">async</span> () =&gt; &#123;&#125;</span><br><span class="line">B = <span class="keyword">async</span> () =&gt; &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这里的A和B都是Promise</span></span><br><span class="line"><span class="comment">// 顺序执行，只需</span></span><br><span class="line">(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">await</span> A()</span><br><span class="line">  <span class="keyword">await</span> B()</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>  <span class="comment">// 可以直接return</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 这里有个问题就是，如果内容函数使用了async，外部函数也必须使用async或者promise，否则会接收不到返回值</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本文基于作者熟悉的内容编写，未包含yield</p>
+<p>JavaScript的这三种形态变化，其实都是语法糖，内容都是基于事件回调，因为JavaScript是单线程的</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="../../02/server-deploy/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              2019-09-04 22:32:00
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="标签"></i>
+                    
+                    <span class="span--tag">
+                      <a href="../../../../tags/JavaScript/" title="JavaScript">
+                        <b>#</b> JavaScript
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="../coding-spec/" target="_self">
+                <span>下一页</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Callback-%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0"><span class="toc-text">Callback - 回调函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Promise"><span class="toc-text">Promise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Async"><span class="toc-text">Async</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol>
+    </div>
+  </div>
+
+  
+<script src="../../../../js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="../../../../js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+  
+<script src="../../../../js/search.js"></script>
+
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var getSearchFile = function() {
+        var path = "/search.json";
+        searchFunc(path, 'search-input', 'search-result', {"searchFirst":"首次搜索，正在载入索引文件，请稍后……","searchNoResult":"没有找到内容，请尝试更换检索词。","searchFilesNotfound":"未找到search.xml文件，具体请参考：","searchServiceErrors":"请求失败，尝试重新刷新页面或稍后重试。"});
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="../../../../js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Callback%EF%BC%8CPromise%EF%BC%8CAsync + '&url=' + https%3A%2F%2Findex-js.github.io%2F2019%2F09%2F04%2Fcallback-promise-async%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://index-js.github.io/2019/09/04/callback-promise-async/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+    <script>
+      document.querySelector('#share-icon').addEventListener('click', () => {
+        const cls = document.querySelector('.share-content').classList
+        cls.contains('hidden') ? cls.remove('hidden') : cls.add('hidden')
+      }, false)
+    </script>
+  
+
+
+      </div>
+
+      <div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/index-js">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="email" href="mailto:i@yangl.in">
+            <i class="iconfont icon-envelope"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="rss" href="/atom.xml">
+            <i class="iconfont icon-rss"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">蜀ICP备2021019109号-1</a>
+        
+    </div>
+  
+</div>
+
+    </div>
+  </body>
+</html>

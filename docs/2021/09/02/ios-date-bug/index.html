@@ -11,6 +11,11 @@
   
   <title>
     
+      iOS机型new Date问题 
+      
+      
+      |
+    
      杨林的博客
   </title>
 
@@ -24,12 +29,12 @@
 
   <!-- hexo site css -->
   
-<link rel="stylesheet" href="css/color-scheme.css">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="iconfont/iconfont.css">
-<link rel="stylesheet" href="css/github-markdown.css">
-<link rel="stylesheet" href="css/highlight.css">
-<link rel="stylesheet" href="css/comments.css">
+<link rel="stylesheet" href="../../../../css/color-scheme.css">
+<link rel="stylesheet" href="../../../../css/base.css">
+<link rel="stylesheet" href="../../../../iconfont/iconfont.css">
+<link rel="stylesheet" href="../../../../css/github-markdown.css">
+<link rel="stylesheet" href="../../../../css/highlight.css">
+<link rel="stylesheet" href="../../../../css/comments.css">
 
 
   
@@ -91,15 +96,121 @@
   
 
   
-    <!-- 关于页 url形式：https://yoursite/404/ -->
-      <div class="container about-index">
-        <div class="markdown-body">
-          <h3 id="404-Not-Found"><a href="#404-Not-Found" class="headerlink" title="404 Not Found"></a>404 Not Found</h3>
-        </div>
-      </div>
-  
 
   
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">iOS机型new Date问题</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          2021-09-02 15:02:00
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签"></i>
+                
+                <span class="span--tag">
+                  <a href="../../../../tags/JavaScript/" title="JavaScript">
+                    <b>#</b> JavaScript
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="../../../../tags/%E5%89%8D%E7%AB%AF/" title="前端">
+                    <b>#</b> 前端
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <blockquote>
+<p>在iOS下，new Date(‘2020-02-02 01:01’)这种格式，会返回Invalid Date</p>
+</blockquote>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><ol>
+<li>替换为年/月/日 时-分-秒格式，兼容其它PC和手机浏览器，如new Date(‘2020/02/02 01:01’)</li>
+<li>替换中间空格为字母T，也是兼容的，如new Date(‘2020-02-02T01:01’)</li>
+</ol>
+<p>注意new Date(‘2020/02/02T01:01’)也为Invalid Date，混用🙅‍♀️</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="../../../08/24/tool-web/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              2021-09-02 15:02:00
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="标签"></i>
+                    
+                    <span class="span--tag">
+                      <a href="../../../../tags/JavaScript/" title="JavaScript">
+                        <b>#</b> JavaScript
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="../../../../tags/%E5%89%8D%E7%AB%AF/" title="前端">
+                        <b>#</b> 前端
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="../../15/mobile-map-picker/" target="_self">
+                <span>下一页</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="toc-text">解决办法</span></a></li></ol>
+    </div>
+  </div>
+
+  
+<script src="../../../../js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+      </div>
+    
+  </div>
+
 
       </div>
 
@@ -111,7 +222,7 @@
 </div>
 
 
-<script src="js/backtotop.js"></script>
+<script src="../../../../js/backtotop.js"></script>
 
 
 
@@ -143,7 +254,7 @@
     </div>
   </div>
   
-<script src="js/search.js"></script>
+<script src="../../../../js/search.js"></script>
 
 
   <script type="text/javascript">
@@ -199,7 +310,7 @@
   </div>
 
   
-<script src="js/colorscheme.js"></script>
+<script src="../../../../js/colorscheme.js"></script>
 
 
 
@@ -213,12 +324,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' +  + '&url=' + https%3A%2F%2Findex-js.github.io%2F404.html + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + iOS%E6%9C%BA%E5%9E%8Bnew%20Date%E9%97%AE%E9%A2%98 + '&url=' + https%3A%2F%2Findex-js.github.io%2F2021%2F09%2F02%2Fios-date-bug%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://index-js.github.io/404.html" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://index-js.github.io/2021/09/02/ios-date-bug/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
