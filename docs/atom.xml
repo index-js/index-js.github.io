@@ -6,7 +6,7 @@
   <link href="https://index-js.github.io/atom.xml" rel="self"/>
   
   <link href="https://index-js.github.io/"/>
-  <updated>2021-10-25T02:03:00.000Z</updated>
+  <updated>2021-11-02T03:21:14.638Z</updated>
   <id>https://index-js.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SSH登录服务器</title>
+    <link href="https://index-js.github.io/2021/11/02/ssh-login/"/>
+    <id>https://index-js.github.io/2021/11/02/ssh-login/</id>
+    <published>2021-11-02T03:11:18.000Z</published>
+    <updated>2021-11-02T03:21:14.638Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="进入命令行，生成自己的公私钥"><a href="#进入命令行，生成自己的公私钥" class="headerlink" title="进入命令行，生成自己的公私钥"></a>进入命令行，生成自己的公私钥</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br><span class="line"></span><br><span class="line"><span class="comment"># Linux在~/.ssh目录下，Windows在C盘根目录</span></span><br><span class="line"><span class="comment"># 目录结构如下</span></span><br><span class="line">-- .ssh</span><br><span class="line">  |-- id_rsa</span><br><span class="line">  |-- id_rsa.pub</span><br></pre></td></tr></table></figure><h2 id="连接服务器，设置访问凭证"><a href="#连接服务器，设置访问凭证" class="headerlink" title="连接服务器，设置访问凭证"></a>连接服务器，设置访问凭证</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将公钥传到服务器，追加到~/.ssh/authorized_keys文件里</span></span><br><span class="line">cat id_dsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;进入命令行，生成自己的公私钥&quot;&gt;&lt;a href=&quot;#进入命令行，生成自己的公私钥&quot; class=&quot;headerlink&quot; title=&quot;进入命令行，生成自己的公私钥&quot;&gt;&lt;/a&gt;进入命令行，生成自己的公私钥&lt;/h2&gt;&lt;figure class=&quot;highlight </summary>
+      
+    
+    
+    
+    <category term="其它" scheme="https://index-js.github.io/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+    <category term="Ubuntu" scheme="https://index-js.github.io/tags/Ubuntu/"/>
+    
+    <category term="SSH" scheme="https://index-js.github.io/tags/SSH/"/>
+    
+  </entry>
   
   <entry>
     <title>JS原生获取农历新写法</title>

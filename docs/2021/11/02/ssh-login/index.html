@@ -11,7 +11,7 @@
   
   <title>
     
-      标签 
+      SSH登录服务器 
       
       
       |
@@ -77,7 +77,7 @@
           <a href="/pages/categories/">分类</a>
         </li>
       
-        <li class="nav-item active">
+        <li class="nav-item ">
           <a href="/pages/tags/">标签</a>
         </li>
       
@@ -99,23 +99,152 @@
 <!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
 
-  <!-- 标签页 url形式：https://yoursite/tags/ -->
-  <div class="container tag-index">
-    <div>
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker-Compose/" rel="tag">Docker Compose</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FTP/" rel="tag">FTP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/H5/" rel="tag">H5</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/" rel="tag">SSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VMware/" rel="tag">VMware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/" rel="tag">Windows</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%AA%E5%B9%B3%E6%B4%8B%E4%BF%9D%E9%99%A9/" rel="tag">太平洋保险</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag">小程序</a><span class="tag-list-count">1</span></li></ul>
+
+  
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">SSH登录服务器</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          2021-11-02 11:11:18
+        </span>
+        
+              <span class="post-categories">
+                <i class="iconfont icon-bookmark" title="分类"></i>
+                
+                <span class="span--category">
+                  <a href="/categories/%E5%85%B6%E5%AE%83/" title="其它">
+                    <b>#</b> 其它
+                  </a>
+                </span>
+                
+              </span>
+          
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/Ubuntu/" title="Ubuntu">
+                    <b>#</b> Ubuntu
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/SSH/" title="SSH">
+                    <b>#</b> SSH
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="进入命令行，生成自己的公私钥"><a href="#进入命令行，生成自己的公私钥" class="headerlink" title="进入命令行，生成自己的公私钥"></a>进入命令行，生成自己的公私钥</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br><span class="line"></span><br><span class="line"><span class="comment"># Linux在~/.ssh目录下，Windows在C盘根目录</span></span><br><span class="line"><span class="comment"># 目录结构如下</span></span><br><span class="line">-- .ssh</span><br><span class="line">  |-- id_rsa</span><br><span class="line">  |-- id_rsa.pub</span><br></pre></td></tr></table></figure>
+<h2 id="连接服务器，设置访问凭证"><a href="#连接服务器，设置访问凭证" class="headerlink" title="连接服务器，设置访问凭证"></a>连接服务器，设置访问凭证</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将公钥传到服务器，追加到~/.ssh/authorized_keys文件里</span></span><br><span class="line">cat id_dsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2021/10/25/js-date-lunar/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              2021-11-02 11:11:18
+            </span>
+            
+                  <span class="post-categories">
+                    <i class="iconfont icon-bookmark" title="分类"></i>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E5%85%B6%E5%AE%83/" title="其它">
+                        <b>#</b> 其它
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="标签"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/Ubuntu/" title="Ubuntu">
+                        <b>#</b> Ubuntu
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/SSH/" title="SSH">
+                        <b>#</b> SSH
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E5%91%BD%E4%BB%A4%E8%A1%8C%EF%BC%8C%E7%94%9F%E6%88%90%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%AC%E7%A7%81%E9%92%A5"><span class="toc-text">进入命令行，生成自己的公私钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%8C%E8%AE%BE%E7%BD%AE%E8%AE%BF%E9%97%AE%E5%87%AD%E8%AF%81"><span class="toc-text">连接服务器，设置访问凭证</span></a></li></ol>
     </div>
   </div>
-  
 
   
+<script src="/static/js/catalog.js"></script>
 
-  
 
-  
 
-  
 
-  
+    
+      <div class="comments-container">
+        
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+  <div id="vcomments"></div>
+
+  <script>
+    new Valine({
+      el: '#vcomments',
+      appId: 'gxUGOlvmRdJDF7uhm9hQS44B-gzGzoHsz',
+      appKey: '369PuooqB9swyor4RiJttTxz',
+      placeholder: 'Welcome!',
+      avatar: 'retro',
+      lang: 'zh-CN',
+      requiredFields: ['nick', 'mail']
+    })
+  </script>
+
+
+      </div>
+    
+  </div>
+
 
     </div>
 
@@ -275,12 +404,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E6%A0%87%E7%AD%BE + '&url=' + https%3A%2F%2Findex-js.github.io%2Fpages%2Ftags%2Findex.html + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + SSH%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8 + '&url=' + https%3A%2F%2Findex-js.github.io%2F2021%2F11%2F02%2Fssh-login%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://index-js.github.io/pages/tags/index.html" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://index-js.github.io/2021/11/02/ssh-login/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
