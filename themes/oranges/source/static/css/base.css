@@ -68,7 +68,7 @@ a:hover {
 }
 
 .index .post-list,
-.friend-index .friend-list,
+.website-index .website-list,
 .archives .post-list,
 .tag-index .tag-list,
 .about-index .markdown-body {
@@ -88,7 +88,7 @@ a:hover {
     width: 90%;
   }
   .index .post-list,
-  .friend-index .friend-list,
+  .website-index .website-list,
   .archives .post-list,
   .tag-index .tag-list,
   .about-index .markdown-body {
@@ -147,7 +147,7 @@ a:hover {
 
 @media (max-width: 1200px) and (min-width: 887px) {
   .index .post-list,
-  .friend-index .friend-list,
+  .website-index .website-list,
   .archives .post-list,
   .tag-index .tag-list,
   .about-index .markdown-body {
@@ -390,14 +390,19 @@ a:hover {
   padding-left: 30px;
 }
 
-.friend-list-item {
+.website-list-item {
   font-size: 1.6rem;
   padding: 10px;
 }
 
-.friend-list-item .nickname {
+.website-list-item .name {
   padding-right: 10px;
   color: var(--color-text-a)
+}
+
+.website-list-item .card-meta {
+  font-size: 1.4rem;
+  color: #666;
 }
 
 .post-details .post-title {

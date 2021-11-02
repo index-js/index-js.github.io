@@ -58,38 +58,6 @@ navbar:
 </details>
 
 <details>
-  <summary><b>Friends page</b> (click to show)</summary>
-
-在hexo博客项目根目录下执行，在`source`文件夹下生成`friends`文件夹
-
-```bash
-$ hexo new page friends
-```
-
-接着修改`friends`文件夹下`index`为以下内容
-
-```markdown
----
-title: tags
-date: 2019-05-03 12:03:35
-type: "friends"
-categories:
-tags:
----
-```
-
-并在主题配置文件`_config.yml`修改对应`enable`为`true`，如不想展示，设置为`false`即可
-
-```yml
-navbar:
-  -
-    name: 朋友
-    enable: true
-    path: /friends/
-```
-</details>
-
-<details>
   <summary><b>About me page</b> (click to show)</summary>
 
 在hexo博客项目根目录下执行，在`source`文件夹下生成`about`文件夹

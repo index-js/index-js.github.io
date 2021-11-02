@@ -1,0 +1,13 @@
+# name: 名称
+# site: 地址
+# desc: 描述
+-
+  name: QuickRef
+  site: https://quickref.me/
+-
+  name: 菜鸟教程
+  site: https://www.runoob.com/
+-
+  name: 图标库
+  site: https://www.iconfont.cn/
+  desc: Iconfont，阿里巴巴矢量图标库

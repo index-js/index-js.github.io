@@ -7,7 +7,6 @@
   # navbar: 主题页面导航栏
   # catalog: 文章目录
   # prevnext: 文章末尾的上一页与下一页
-  # friends: 友链
   # footer: 页脚信息
   # search: 文章搜索
   # colorSwitch: 深/浅配色切换
@@ -70,7 +69,7 @@ navbar:
     name: 网站
     enable: true
     path: /pages/website/
-    key: friends
+    key: website
   -
     name: 关于
     enable: true
@@ -84,18 +83,6 @@ catalog:
 # 文章末尾的上一页与下一页
 prevnext:
   enable: true
-
-# 友链详细信息：支持多个友链
-friends:
-  # nickname: 昵称
-  # site: 地址
-  # meta: 描述
-  -
-    nickname: QuickRef
-    site: https://quickref.me/
-  -
-    nickname: 菜鸟教程
-    site: https://www.runoob.com/
 
 # 页脚信息
 footer:

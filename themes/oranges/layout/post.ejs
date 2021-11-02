@@ -19,18 +19,18 @@
   </div>
   <% } %>
 
-  <% if (page.type === "friends") { %>
-  <!-- 朋友页 url形式：https://yoursite/friends/ -->
-  <div class="container friend-index">
-    <div class="friend-list">
-      <% for(let friend of theme.friends) { %>
-        <div class="friend-list-item">
-          <span class="nickname">@ <%- friend.nickname %></span>
-          <a href="<%- friend.site %>" target="_blank">
-            <span class="site-path"><%- friend.site %></span>
+  <% if (page.type === "website") { %>
+  <!-- 网站页 url形式：https://yoursite/website/ -->
+  <div class="container website-index">
+    <div class="website-list">
+      <% for(let item of site.data.website) { %>
+        <div class="website-list-item">
+          <span class="nickname">@ <%- item.name %></span>
+          <a href="<%- item.site %>" target="_blank">
+            <span class="site-path"><%- item.site %></span>
           </a>
           <p class="card-meta">
-            <%- friend.meta %>
+            <%- item.desc %>
           </p>
         </div>
       <% } %>
