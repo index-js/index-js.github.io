@@ -160,7 +160,7 @@ a:hover {
   font-size: 1.6rem;
   margin-bottom: 20px;
   align-items: center;
-  line-height: 21px;
+  line-height: 1.5;
 }
 
 .post-item .time-m-d {
@@ -168,7 +168,7 @@ a:hover {
   margin-right: 30px;
   color: var(--color-text-base);
   font-size: 1.5rem;
-  line-height: 21px;
+  line-height: 1.5;
 }
 
 .post-item .title {
@@ -582,8 +582,8 @@ a:hover {
   background-color: transparent;
   padding: 0 10px;
   font-size: 1.6rem;
-  height: 38px;
-  line-height: 38px;
+  height: 4rem;
+  line-height: 4rem;
   color: var(--color-text-a);
 }
 

@@ -337,16 +337,14 @@
 }
 
 .markdown-body code {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
-    monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 12px;
 }
 
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
-    monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 12px;
 }
 
@@ -456,8 +454,8 @@
 .markdown-body kbd {
   display: inline-block;
   padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
+  font-size: 1rem;
+  line-height: 1;
   color: #444d56;
   vertical-align: middle;
   background-color: #fafbfc;
@@ -719,9 +717,8 @@
 .markdown-body kbd {
   display: inline-block;
   padding: 3px 5px;
-  font: 11px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
-    monospace;
-  line-height: 10px;
+  font: 1rem "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 1;
   color: #444d56;
   vertical-align: middle;
   background-color: #fafbfc;
