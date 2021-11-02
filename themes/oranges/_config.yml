@@ -27,6 +27,7 @@ avatar: /static/images/avatar.jpeg
 # CNZZ统计
 cnzz:
   enable: true
+  id: 1280512941
   url: https://s9.cnzz.com/z_stat.php?id=1280512941&online=1&show=line
 
 # 文章评论系统
