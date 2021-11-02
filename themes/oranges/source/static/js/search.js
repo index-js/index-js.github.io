@@ -1,11 +1,9 @@
 const safeRegex = /[\^\(\)\.\*\+\?\[\|\$\\]/g
 const splitWord = /[\s\-]+/
 
-const searchFunc = (path, search_id, content_id, trans) => {
+const searchFunc = (path, search_id, content_id) => {
   const contentEle = document.getElementById(content_id)
 
-  // Init Loading
-  contentEle.innerHTML = `<ul><span class="local-search-empty">${trans.searchFirst}<span></ul>`
   fetch(path).then(res => {
     if (res.ok) return res.json()
     else throw [res.status, res.statusText]
@@ -30,8 +28,8 @@ const searchFunc = (path, search_id, content_id, trans) => {
           let content = item.content.slice(start, start + 150)
 
           // Replace keywords
-          content = content.replace(regS, '<span class="search-keyword">$&</span>')
-          const title = item.title.replace(regS, '<span class="search-keyword">$&</span>')
+          content = content.replace(regS, '<b class="keyword">$&</b>')
+          const title = item.title.replace(regS, '<b class="keyword">$&</b>')
 
           return `<li>
             <a href="${item.url}" class="search-result-title">${title}</a>
@@ -42,16 +40,34 @@ const searchFunc = (path, search_id, content_id, trans) => {
       }).filter(item => item)
 
       if (filter.length === 0) {
-        return contentEle.innerHTML = `<ul><span class="local-search-empty">${trans.searchNoResult}<span></ul>`
+        return contentEle.innerHTML = '<ul><span class="local-search-empty">没有找到内容，更换下搜索词试试吧~<span></ul>'
       } else {
         contentEle.innerHTML = '<ul class="search-result-list">' + filter.join('') + '</ul>'
       }
     })
-  }).catch(err => {
-    if (err[0] === 404) {
-      contentEle.innerHTML = `<ul><span class="local-search-empty">${trans.searchFilesNotfound}<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>`
-    } else {
-      contentEle.innerHTML = `<ul><span class="local-search-empty">${trans.searchServiceErrors}<span></ul>`
-    }
-  })
+  }).catch(console.error)
 }
+
+function openOrHideSearchContent() {
+  let isHidden = searchOverlayArea.classList.contains('hidden')
+  if (isHidden) {
+    searchOverlayArea.classList.remove('hidden')
+    document.body.classList.add('hidden')
+
+    searchFunc('/search.json', 'search-input', 'search-result')
+  } else {
+    searchOverlayArea.classList.add('hidden')
+    document.body.classList.remove('hidden')
+  }
+}
+
+
+document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+
+const searchOverlayArea = document.querySelector(".search-overlay")
+searchOverlayArea.addEventListener("click", e => {
+  if (e.target === searchOverlayArea) {
+    openOrHideSearchContent()
+  }
+}, false)

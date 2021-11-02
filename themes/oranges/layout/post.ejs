@@ -161,9 +161,10 @@
       <% } %>
     </div>
     <%- partial("_partial/catalog") %>
+
     <% if(theme.comments.enable) { %>
       <div class="comments-container">
-        <%- partial("_partial/comments") %>
+        <div id="vcomments"></div>
       </div>
     <% } %>
   </div>

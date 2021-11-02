@@ -169,7 +169,6 @@ a:hover {
   color: var(--color-text-base);
   font-size: 1.5rem;
   line-height: 21px;
-  /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
 }
 
 .post-item .title {
@@ -219,7 +218,6 @@ a:hover {
   font-size: 1.6rem;
   color: var(--color-text-a);
   margin-bottom: 20px;
-  /*font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;*/
 }
 
 .navbar {
@@ -619,7 +617,7 @@ a:hover {
   word-break: break-all;
 }
 
-.search-keyword {
+.keyword {
   color: var(--color-text-md-code);
 }
 

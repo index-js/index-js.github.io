@@ -1,8 +1,5 @@
-<% if (theme.comments.enable && theme.comments.valine.enable) { %>
+<% if (is_post() && theme.comments.enable && theme.comments.valine.enable) { %>
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-
-  <div id="vcomments"></div>
-
   <script>
     new Valine({
       el: '#vcomments',

@@ -24,9 +24,6 @@
     <link rel="icon" href="/static/images/favicon.ico">
   
 
-  <!-- Raleway-Font -->
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-
   <!-- hexo site css -->
   
 <link rel="stylesheet" href="/static/css/color-scheme.css">
@@ -234,26 +231,10 @@
 
 
 
+
     
       <div class="comments-container">
-        
-  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-
-  <div id="vcomments"></div>
-
-  <script>
-    new Valine({
-      el: '#vcomments',
-      appId: 'gxUGOlvmRdJDF7uhm9hQS44B-gzGzoHsz',
-      appKey: '369PuooqB9swyor4RiJttTxz',
-      placeholder: 'Welcome!',
-      avatar: 'retro',
-      lang: 'zh-CN',
-      requiredFields: ['nick', 'mail']
-    })
-  </script>
-
-
+        <div id="vcomments"></div>
       </div>
     
   </div>
@@ -301,7 +282,7 @@
 
   
     <div class="footer-more">
-      <script src="https://s9.cnzz.com/z_stat.php?id=1280512941&online=1&show=line"></script>
+      <script src="https://s9.cnzz.com/z_stat.php?id=1280512941&online=1&show=line" async></script>
     </div>
   
 </div>
@@ -346,51 +327,10 @@
       <div class="search-result" id="search-result"></div>
     </div>
   </div>
+
   
 <script src="/static/js/search.js"></script>
 
-
-  <script type="text/javascript">
-    var inputArea = document.querySelector("#search-input")
-    var searchOverlayArea = document.querySelector(".search-overlay")
-
-    inputArea.onclick = function() {
-      getSearchFile()
-      this.onclick = null
-    }
-
-    inputArea.onkeydown = function() {
-      if(event.keyCode == 13)
-        return false
-    }
-
-    function openOrHideSearchContent() {
-      let isHidden = searchOverlayArea.classList.contains('hidden')
-      if (isHidden) {
-        searchOverlayArea.classList.remove('hidden')
-        document.body.classList.add('hidden')
-        // inputArea.focus()
-      } else {
-        searchOverlayArea.classList.add('hidden')
-        document.body.classList.remove('hidden')
-      }
-    }
-
-    function blurSearchContent(e) {
-      if (e.target === searchOverlayArea) {
-        openOrHideSearchContent()
-      }
-    }
-
-    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
-    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
-    searchOverlayArea.addEventListener("click", blurSearchContent, false)
-
-    var getSearchFile = function() {
-        var path = "/search.json";
-        searchFunc(path, 'search-input', 'search-result', {"searchFirst":"首次搜索，正在载入索引文件，请稍后……","searchNoResult":"没有找到内容，请尝试更换检索词。","searchFilesNotfound":"未找到search.xml文件，具体请参考：","searchServiceErrors":"请求失败，尝试重新刷新页面或稍后重试。"});
-    }
-  </script>
 
 
 
@@ -428,15 +368,30 @@
         
       </div>
     </div>
-    <script>
-      document.querySelector('#share-icon').addEventListener('click', () => {
-        const cls = document.querySelector('.share-content').classList
-        cls.contains('hidden') ? cls.remove('hidden') : cls.add('hidden')
-      }, false)
-    </script>
+
+    
+<script src="/static/js/shares.js"></script>
+
+
   
 
 
     </div>
+
+    
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script>
+    new Valine({
+      el: '#vcomments',
+      appId: 'gxUGOlvmRdJDF7uhm9hQS44B-gzGzoHsz',
+      appKey: '369PuooqB9swyor4RiJttTxz',
+      placeholder: 'Welcome!',
+      avatar: 'retro',
+      lang: 'zh-CN',
+      requiredFields: ['nick', 'mail']
+    })
+  </script>
+
+
   </body>
 </html>
