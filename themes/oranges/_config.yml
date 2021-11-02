@@ -29,6 +29,11 @@ cnzz:
   id: 1280512941
   url: https://s9.cnzz.com/z_stat.php?id=1280512941&online=1&show=line
 
+# 百度统计
+baidu:
+  enable: true
+  url: https://hm.baidu.com/hm.js?cefb7397dbcedefdcf3db80a03e36226
+
 # 文章评论系统
 comments:
   enable: true
