@@ -2,6 +2,9 @@
 title: Callback，Promise，Async
 date: 2019-09-04 22:32
 updated: 2019-09-04 22:32
+categories:
+    - 编程
+    - 前端
 tags:
     - JavaScript
 ---

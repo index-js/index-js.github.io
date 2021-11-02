@@ -2,6 +2,9 @@
 title: JavaScript千分位
 date: 2021-08-24 15:29
 updated: 2021-08-24 15:29
+categories:
+    - 编程
+    - 前端
 tags:
     - JavaScript
 ---

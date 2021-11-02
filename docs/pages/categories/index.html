@@ -11,8 +11,8 @@
   
   <title>
     
-      标签 
-       : Coding
+      分类 
+      
       
       |
     
@@ -70,19 +70,23 @@
         </li>
       
         <li class="nav-item ">
-          <a href="/archives/">归档</a>
+          <a href="/pages/archives/">归档</a>
+        </li>
+      
+        <li class="nav-item active">
+          <a href="/pages/categories/">分类</a>
         </li>
       
         <li class="nav-item ">
-          <a href="/tags/">标签</a>
+          <a href="/pages/tags/">标签</a>
         </li>
       
         <li class="nav-item ">
-          <a href="/website/">参考网站</a>
+          <a href="/pages/website/">网站</a>
         </li>
       
         <li class="nav-item ">
-          <a href="/about/">关于</a>
+          <a href="/pages/about/">关于</a>
         </li>
       
     </ul>
@@ -91,30 +95,27 @@
 
 
     <div class="flex-container">
-      <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
+      <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<div class="container tag-details">
-  <div class="content-title">
-    <h2>
-      <span>Coding</span>
-    </h2>
+
+
+  
+  <!-- 分类页 url形式：https://yoursite/categories/ -->
+  <div class="container category-index">
+    <div>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%89%8D%E7%AB%AF/">前端</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/H5/">H5</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">小程序</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%B6%E5%AE%83/">其它</a><span class="category-list-count">1</span></li></ul>
+    </div>
   </div>
   
-    <div class="post-list">
-      <div class="post-item" title="编程规范(个人见解)">
-        <span class="time-m-d">2019-09-04</span>
-        <a href="/2019/09/04/coding-spec/">
-          <span>编程规范(个人见解)</span>
-        </a>
-      </div>
-    </div>
+
   
-  <nav class="post-navigation">
-    
-    <span class="page-num">1 / 1</span>
-    
-  </nav>
-</div>
+
+  
+
+  
+
+  
 
     </div>
 
@@ -267,6 +268,30 @@
 
 
       
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E5%88%86%E7%B1%BB + '&url=' + https%3A%2F%2Findex-js.github.io%2Fpages%2Fcategories%2Findex.html + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://index-js.github.io/pages/categories/index.html" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+    <script>
+      document.querySelector('#share-icon').addEventListener('click', () => {
+        const cls = document.querySelector('.share-content').classList
+        cls.contains('hidden') ? cls.remove('hidden') : cls.add('hidden')
+      }, false)
+    </script>
   
 
 

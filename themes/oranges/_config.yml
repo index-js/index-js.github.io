@@ -53,27 +53,27 @@ navbar:
   -
     name: 归档
     enable: true
-    path: /archives/
+    path: /pages/archives/
     key: archives
   -
     name: 分类
-    enable: false
-    path: /categories/
+    enable: true
+    path: /pages/categories/
     key: categories
   -
     name: 标签
     enable: true
-    path: /tags/
+    path: /pages/tags/
     key: tags
   -
-    name: 参考网站
+    name: 网站
     enable: true
-    path: /website/
+    path: /pages/website/
     key: friends
   -
     name: 关于
     enable: true
-    path: /about/
+    path: /pages/about/
     key: about
 
 # 文章目录

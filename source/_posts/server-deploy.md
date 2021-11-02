@@ -3,6 +3,9 @@ key: TODO
 title: 服务器部署，Docker & Vsftpd
 date: 2019-09-02 14:32
 updated: 2019-09-02 14:32
+categories:
+    - 编程
+    - 服务器
 tags:
     - Ubuntu
     - Docker

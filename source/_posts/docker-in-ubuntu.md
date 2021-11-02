@@ -2,6 +2,9 @@
 title: Ubuntu使用Docker
 date: 2018-11-07 18:18
 updated: 2018-11-07 18:18
+categories:
+    - 编程
+    - 服务器
 tags:
     - Docker
     - Ubuntu

@@ -2,6 +2,9 @@
 title: MySQL备份
 date: 2019-07-18 12:03
 updated: 2019-07-18 12:03
+categories:
+    - 编程
+    - 服务器
 tags:
     - MySQL
     - Docker

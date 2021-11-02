@@ -33,6 +33,10 @@
     
     
     
+    <category term="编程" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="前端" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/%E5%89%8D%E7%AB%AF/"/>
+    
     
     <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
     
@@ -55,6 +59,10 @@
       
     
     
+    
+    <category term="编程" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="小程序" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
     <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
@@ -81,6 +89,10 @@
       
     
     
+    
+    <category term="编程" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="H5" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/H5/"/>
     
     
     <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
@@ -111,6 +123,10 @@
     
     
     
+    <category term="编程" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="H5" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/H5/"/>
+    
     
     <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
     
@@ -135,6 +151,10 @@
     
     
     
+    <category term="编程" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="前端" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/%E5%89%8D%E7%AB%AF/"/>
+    
     
     <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
     
@@ -158,6 +178,10 @@
       
     
     
+    
+    <category term="编程" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="前端" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/%E5%89%8D%E7%AB%AF/"/>
     
     
     <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
@@ -184,10 +208,8 @@
     
     
     
+    <category term="编程" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="Coding" scheme="https://index-js.github.io/tags/Coding/"/>
-    
-    <category term="编程" scheme="https://index-js.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
@@ -207,6 +229,10 @@
       
     
     
+    
+    <category term="编程" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="前端" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/%E5%89%8D%E7%AB%AF/"/>
     
     
     <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
@@ -229,6 +255,10 @@
       
     
     
+    
+    <category term="编程" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="服务器" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
     <category term="Docker" scheme="https://index-js.github.io/tags/Docker/"/>
@@ -262,6 +292,8 @@
     
     
     
+    <category term="其它" scheme="https://index-js.github.io/categories/%E5%85%B6%E5%AE%83/"/>
+    
     
     <category term="VMware" scheme="https://index-js.github.io/tags/VMware/"/>
     
@@ -285,6 +317,10 @@
       
     
     
+    
+    <category term="编程" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="服务器" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
     <category term="Docker" scheme="https://index-js.github.io/tags/Docker/"/>
@@ -311,6 +347,8 @@
     
     
     
+    <category term="生活" scheme="https://index-js.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
     
     <category term="太平洋保险" scheme="https://index-js.github.io/tags/%E5%A4%AA%E5%B9%B3%E6%B4%8B%E4%BF%9D%E9%99%A9/"/>
     
@@ -335,6 +373,10 @@
       
     
     
+    
+    <category term="编程" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="服务器" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
     
     <category term="Docker" scheme="https://index-js.github.io/tags/Docker/"/>
@@ -365,10 +407,8 @@
     
     
     
+    <category term="生活" scheme="https://index-js.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="游戏" scheme="https://index-js.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
-    
-    <category term="Game" scheme="https://index-js.github.io/tags/Game/"/>
     
   </entry>
   

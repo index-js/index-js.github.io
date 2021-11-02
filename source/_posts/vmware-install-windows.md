@@ -2,6 +2,8 @@
 title: VMware安装XP系统(附激活方法)
 date: 2019-07-22 10:28
 updated: 2019-07-22 10:28
+categories:
+    - 其它
 tags:
     - VMware
     - Windows

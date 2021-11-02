@@ -11,8 +11,8 @@
   
   <title>
     
-      标签 
-       : 编程
+      关于 
+      
       
       |
     
@@ -70,19 +70,23 @@
         </li>
       
         <li class="nav-item ">
-          <a href="/archives/">归档</a>
+          <a href="/pages/archives/">归档</a>
         </li>
       
         <li class="nav-item ">
-          <a href="/tags/">标签</a>
+          <a href="/pages/categories/">分类</a>
         </li>
       
         <li class="nav-item ">
-          <a href="/website/">参考网站</a>
+          <a href="/pages/tags/">标签</a>
         </li>
       
         <li class="nav-item ">
-          <a href="/about/">关于</a>
+          <a href="/pages/website/">网站</a>
+        </li>
+      
+        <li class="nav-item active">
+          <a href="/pages/about/">关于</a>
         </li>
       
     </ul>
@@ -91,30 +95,30 @@
 
 
     <div class="flex-container">
-      <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
+      <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<div class="container tag-details">
-  <div class="content-title">
-    <h2>
-      <span>编程</span>
-    </h2>
-  </div>
+
+
   
-    <div class="post-list">
-      <div class="post-item" title="编程规范(个人见解)">
-        <span class="time-m-d">2019-09-04</span>
-        <a href="/2019/09/04/coding-spec/">
-          <span>编程规范(个人见解)</span>
-        </a>
+
+  
+
+  
+  <!-- 关于页 url形式：https://yoursite/about/ -->
+    <div class="container about-index">
+      <div class="markdown-body">
+        <h2 id="杨林"><a href="#杨林" class="headerlink" title="杨林"></a>杨林</h2><blockquote>
+<p>一个程序员，现在杭州，爱好自驾、爬山、拍照。</p>
+</blockquote>
+
       </div>
     </div>
   
-  <nav class="post-navigation">
-    
-    <span class="page-num">1 / 1</span>
-    
-  </nav>
-</div>
+
+  
+
+  
 
     </div>
 
@@ -267,6 +271,30 @@
 
 
       
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E5%85%B3%E4%BA%8E + '&url=' + https%3A%2F%2Findex-js.github.io%2Fpages%2Fabout%2Findex.html + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://index-js.github.io/pages/about/index.html" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+    <script>
+      document.querySelector('#share-icon').addEventListener('click', () => {
+        const cls = document.querySelector('.share-content').classList
+        cls.contains('hidden') ? cls.remove('hidden') : cls.add('hidden')
+      }, false)
+    </script>
   
 
 

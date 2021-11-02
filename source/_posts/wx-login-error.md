@@ -2,6 +2,9 @@
 title: wx.login获取session_key失败
 date: 2021-09-19 09:28
 updated: 2021-09-19 09:28
+categories:
+    - 编程
+    - 小程序
 tags:
     - JavaScript
     - 前端
