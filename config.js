@@ -1,6 +1,6 @@
 module.exports = {
     srcDir: './source/_posts',
-    distDir: './dist',
+    distDir: './docs',
     root: 'https://index-js.github.io/',
     meta: {
         title: '杨林的博客',

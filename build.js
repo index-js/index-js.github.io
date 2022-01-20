@@ -62,6 +62,7 @@ const build = () => {
 
     // 复制静态文件
     execSync(`cp -r public/* ${distDir}`)
+    execSync(`cp -r public/.* ${distDir}`)
 }
 
 
