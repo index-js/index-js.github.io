@@ -1,0 +1,12 @@
+{{> headerLayout}}
+
+<main>
+    {{#posts}}
+    <div class="post-item">
+        <span class="time">{{#dateF}}{{ date }}{{/dateF}}</span>
+        <a href="/" class="title" title="{{ title }}">{{ title }}</a>
+    </div>
+    {{/posts}}
+</main>
+
+{{> footerLayout}}
