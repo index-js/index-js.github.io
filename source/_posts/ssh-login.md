@@ -1,6 +1,6 @@
 ---
 title: SSH登录服务器
-date: 2021-11-02 11:11:18
+date: 2021-11-02 11:11
 categories:
     - 其它
 tags:
