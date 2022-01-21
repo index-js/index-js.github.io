@@ -1,0 +1,149 @@
+:root {
+    --bg-body: #fff;
+    --color-text: #666;
+    --color-text-hover: #000;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    font-size: 10px;
+}
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color-text-hover);
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-body);
+    color: var(--color-text);
+    font-family: Menlo, Monaco, "Source Han Sans CN", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    color: #666;
+}
+.header {
+    padding: 50px 0;
+    text-align: center;
+}
+.header .title {
+    margin: 10px 0 30px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.header .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
+nav li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+nav li a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 8px;
+    border-radius: 3px;
+    background-color: var(--color-text);
+    opacity: 0;
+}
+nav li:hover a:after {
+    opacity: 0.3;
+}
+nav li.active a {
+    color: var(--color-text-hover);
+}
+nav li.active a:after {
+    opacity: 0.5;
+}
+.container {
+    flex: 1;
+}
+main {
+    width: 45%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+main .post-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+main .post-item .time {
+    margin-right: 30px;
+    font-size: 1.5rem;
+}
+main .post-item .title {
+    flex: 1;
+    font-size: 1.6rem;
+}
+.page {
+    padding-top: 20px;
+    padding-right: 50px;
+    text-align: right;
+    font-size: 1.5rem;
+}
+.footer {
+    padding: 30px 10px 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.footer p {
+    margin: 5px 0;
+}
+
+/* Responsive CSS */
+@media (max-width: 1200px) {
+    nav li {
+        margin: 0 15px;
+    }
+    main {
+        width: 50%;
+    }
+    .page {
+        padding-right: 10px;
+    }
+}
+@media (max-width: 888px) {
+    nav li {
+        margin: 0 10px;
+    }
+    main {
+        width: 90%;
+    }
+    .page {
+        padding-right: 30px;
+    }
+}
+@media (max-width: 390px) {
+    nav li {
+        margin: 0 3px;
+    }
+    main {
+        width: 100%;
+    }
+    .page {
+        padding-right: 10px;
+    }
+}

@@ -1,12 +1,42 @@
 {{> headerLayout}}
 
 <main>
-    {{#posts}}
-    <div class="post-item">
-        <span class="time">{{#dateF}}{{ date }}{{/dateF}}</span>
-        <a href="/" class="title" title="{{ title }}">{{ title }}</a>
+    {{#if page.html}}
+    <div class="markdown-body">
+{{{ page.html }}}
     </div>
-    {{/posts}}
+    {{/if}}
+
+    {{!<!-- 区分页面类型 -->}}
+    {{#eq page.type 'archives'}}
+    <span>archives</span>
+    {{else eq page.type 'categories'}}
+    {{> categoryList}}
+    {{else eq page.type 'tags'}}
+    {{> tagList}}
+    {{else}}
+    {{/eq}}
+
+    {{!<!-- 首页 -->}}
+    {{#each posts}}
+    <div class="post-item">
+        <span class="time">{{dateStr date 'YYYY-MM-DD'}}</span>
+        <a href="{{ url }}" class="title" title="{{ title }}">{{ title }}</a>
+    </div>
+    {{/each}}
+
+    {{!<!-- 首页分页 -->}}
+    {{#if page.size}}
+    <div class="page">
+        {{#if page.prev}}
+        <a href="{{ page.prev_link }}"><</a>
+        {{/if}}
+        <span>{{ page.current }} / {{ page.total }}</span>
+        {{#if page.next}}
+        <a href="{{ page.next_link }}">></a>
+        {{/if}}
+    </div>
+    {{/if}}
 </main>
 
 {{> footerLayout}}

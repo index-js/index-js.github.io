@@ -1,0 +1,26 @@
+<style>
+.tag-list li {
+  font-size: 1.6rem;
+  display: inline-block;
+  padding: 10px;
+}
+.tag-link {
+  position: relative;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+.tag-count {
+  padding: 0 5px;
+  color: #aaa;
+  font-size: 1.2rem;
+  vertical-align: top;
+}
+</style>
+<ul class="tag-list">
+    {{#each tags}}
+    <li>
+        <a href="/tags/{{ slug }}/" class="tag-link">{{ name }}</a>
+        <span class="tag-count">{{ count }}</span>
+    </li>
+    {{/each}}
+</ul>

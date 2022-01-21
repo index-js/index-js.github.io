@@ -1,0 +1,37 @@
+<style>
+.category-list li {
+  font-size: 1.6rem;
+  padding: 5px 0;
+}
+.category-list li::marker {
+  content: "• ";
+  color: var(--color-text)
+}
+.category-list .child {
+    padding-left: 30px;
+}
+.category-count {
+  padding: 0 5px;
+  color: #aaa;
+  font-size: 1.2rem;
+  vertical-align: top;
+}
+</style>
+<ul class="category-list">
+    {{#each categories}}
+    <li class="list">
+        <a href="/categories/{{ slug }}/" class="category-link">{{ name }}</a>
+        <span class="category-count">{{ count }}</span>
+        {{#if children}}
+        <ul class="child">
+            {{#each children}}
+            <li>
+                <a href="/categories/{{ slug }}/" class="category-link">{{ name }}</a>
+                <span class="category-count">{{ count }}</span>
+            </li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </li>
+    {{/each}}
+</ul>

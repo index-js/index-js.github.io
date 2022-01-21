@@ -1,6 +1,6 @@
 {
   "name": "static-site",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "build": "node build.js"
@@ -8,7 +8,7 @@
   "dependencies": {
     "dayjs": "^1.10.7",
     "front-matter": "^4.0.2",
-    "marked": "^4.0.10",
-    "mustache": "^4.2.0"
+    "handlebars": "^4.7.7",
+    "marked": "^4.0.10"
   }
 }

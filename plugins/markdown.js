@@ -24,7 +24,7 @@ class Renderer extends marked.Renderer {
 
 
 module.exports = (text, filename) => {
-    const { body, attributes } = fm(text)
+    const { body, attributes } = fm(text, { allowUnsafe: true })
 
     const renderer = new Renderer()
     const html = marked.parse(body, {

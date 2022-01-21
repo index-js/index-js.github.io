@@ -1,5 +1,7 @@
 module.exports = {
-    srcDir: './source/_posts',
+    pageDir: './source/pages',
+    dataDir: './source/_data',
+    postDir: './source/_posts',
     distDir: './docs',
     root: 'https://index-js.github.io/',
     meta: {

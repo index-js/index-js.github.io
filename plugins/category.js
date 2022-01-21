@@ -5,13 +5,14 @@ const groupCategory = categories => categories
     .reduce((list, arr) => {
         if (arr) {
             while(arr.length) {
-                const exist = list.find(({ name }) => name === arr.join('/'))
+                const exist = list.find(({ id }) => id === arr.join('/'))
                 if (exist) {
                     exist.count += 1
                 } else {
                     list.push({
-                        name: arr.join('/'),
+                        id: arr.join('/'),
                         parent: arr.slice(0, -1).join('/'),
+                        name: arr.slice(-1)[0],
                         slug: arr.map(slugize).join('/'),
                         count: 1
                     })
