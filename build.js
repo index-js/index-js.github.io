@@ -33,6 +33,8 @@ const writePageFile = (pagePath, html) => {
 }
 
 const build = () => {
+    console.log('building....')
+
     // 处理page、markdown、yaml转换
     const pageFiles = fs.readdirSync(pageDir).filter(filename => rMarkdown.test(filename))
     const dataFiles = fs.readdirSync(dataDir).filter(filename => rYaml.test(filename))

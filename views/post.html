@@ -1,6 +1,18 @@
 {{> headerLayout}}
 
 <main>
+    <div class="post-title">{{ page.title }}</div>
+    <div class="post-attach">
+        <span class="post-time">{{dateStr page.date 'YYYY-MM-DD HH:mm:ss' }}</span>
+        <div class="post-categories">
+            {{#each page.categories}}
+                <a href="">#{{ . }}</a>
+            {{/each}}
+            {{#each page.tags}}
+                <a href="">#{{ . }}</a>
+            {{/each}}
+        </div>
+    </div>
     <div class="markdown-body">
 {{{ page.html }}}
     </div>
