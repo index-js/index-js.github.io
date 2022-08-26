@@ -46,7 +46,7 @@
   html.setAttribute('color-mode', colorMode)
 </script>
 
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="七六五四三二一" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="七六五四三二一" type="application/atom+xml">
 </head>
 
 
@@ -150,19 +150,19 @@
           
       </div>
       <div class="markdown-body">
-        <h2 id="正则千分位"><a href="#正则千分位" class="headerlink" title="正则千分位"></a>正则千分位</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;1234567890.012345&#x27;</span>.replace(<span class="regexp">/\B(?=(\d&#123;3&#125;)+(\.|$))/g</span>, <span class="string">&#x27;,&#x27;</span>)</span><br><span class="line"><span class="string">&quot;1,234,567,890.012,345&quot;</span></span><br><span class="line"><span class="comment">// 此处有个小问题，小数位大于3，也会加上分隔符</span></span><br></pre></td></tr></table></figure>
+        <h2 id="正则千分位"><a href="#正则千分位" class="headerlink" title="正则千分位"></a>正则千分位</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;1234567890.012345&#x27;</span>.<span class="title function_">replace</span>(<span class="regexp">/\B(?=(\d&#123;3&#125;)+(\.|$))/g</span>, <span class="string">&#x27;,&#x27;</span>)</span><br><span class="line"><span class="string">&quot;1,234,567,890.012,345&quot;</span></span><br><span class="line"><span class="comment">// 此处有个小问题，小数位大于3，也会加上分隔符</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="ES函数，JS原生方法"><a href="#ES函数，JS原生方法" class="headerlink" title="ES函数，JS原生方法"></a>ES函数，JS原生方法</h2><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString">Number.toLocaleString()，详见MDN Web</a></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>(<span class="string">&#x27;1234567890.012345&#x27;</span>).toLocaleString()</span><br><span class="line"><span class="string">&quot;1,234,567,890.012&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 有些浏览器默认最大3个小数位，解决办法是maximumFractionDigits(取值0-20)</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="string">&#x27;1234567890.012345&#x27;</span>).toLocaleString(<span class="literal">undefined</span>, &#123; <span class="attr">maximumFractionDigits</span>: <span class="number">10</span> &#125;)</span><br><span class="line"><span class="string">&quot;1,234,567,890.012345&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Number</span>(<span class="string">&#x27;1234567890.012345&#x27;</span>).<span class="title function_">toLocaleString</span>()</span><br><span class="line"><span class="string">&quot;1,234,567,890.012&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 有些浏览器默认最大3个小数位，解决办法是maximumFractionDigits(取值0-20)</span></span><br><span class="line"><span class="title class_">Number</span>(<span class="string">&#x27;1234567890.012345&#x27;</span>).<span class="title function_">toLocaleString</span>(<span class="literal">undefined</span>, &#123; <span class="attr">maximumFractionDigits</span>: <span class="number">10</span> &#125;)</span><br><span class="line"><span class="string">&quot;1,234,567,890.012345&quot;</span></span><br></pre></td></tr></table></figure>
 
       </div>
       
         <div class="prev-or-next">
-          <div class="post-foot-next">
+          <div class="post-foot-prev">
             
-              <a href="/2019/09/04/coding-spec/" target="_self">
+              <a href="/2021/08/24/tool-web/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
-                <span>上一页</span>
+                <span>上一篇</span>
               </a>
             
           </div>
@@ -201,10 +201,10 @@
                   </span>
               
           </div>
-          <div class="post-foot-prev">
+          <div class="post-foot-next">
             
-              <a href="/2021/08/24/tool-web/" target="_self">
-                <span>下一页</span>
+              <a href="/2019/09/04/coding-spec/" target="_self">
+                <span>下一篇</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
             

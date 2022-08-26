@@ -105,9 +105,9 @@
       </div>
       <% if(theme.prevnext.enable) { %>
         <div class="prev-or-next">
-          <div class="post-foot-next">
-            <% if(page.next) { %>
-              <a href="<%- url_for(page.next.path) %>" target="_self">
+          <div class="post-foot-prev">
+            <% if(page.prev) { %>
+              <a href="<%- url_for(page.prev.path) %>" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span><%= __('prev') %></span>
               </a>
@@ -149,9 +149,9 @@
               }
             } %>
           </div>
-          <div class="post-foot-prev">
-            <% if(page.prev) { %>
-              <a href="<%- url_for(page.prev.path) %>" target="_self">
+          <div class="post-foot-next">
+            <% if(page.next) { %>
+              <a href="<%- url_for(page.next.path) %>" target="_self">
                 <span><%= __('next') %></span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
