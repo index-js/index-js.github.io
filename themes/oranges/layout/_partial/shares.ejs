@@ -5,8 +5,18 @@
         <i class="iconfont iconshare"></i>
       </a>
       <div class="share-content hidden">
+        <% if (theme.postShare.weibo.enable) { %>
+          <a class="share-item" href="https://service.weibo.com/share/share.php?url=<%- page.permalink %>&title=<%- encodeURIComponent(page.title) %>&pic=<%- config.url + theme.avatar %>" target="_blank" title="微博">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+        <% } %>
+        <% if (theme.postShare.qq.enable) { %>
+          <a class="share-item" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<%- page.permalink %>&title=<%- encodeURIComponent(page.title) %>&pics=<%- config.url + theme.avatar %>" target="_blank" title="QQ空间">
+            <i class="iconfont icon-qq"></i>
+          </a>
+        <% } %>
         <% if (theme.postShare.twitter.enable) { %>
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + <%- encodeURIComponent(page.title) %> + '&url=' + <%- encodeURIComponent(page.permalink) %> + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?url=<%- page.permalink %>&text=<%- encodeURIComponent(page.title) %>" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         <% } %>

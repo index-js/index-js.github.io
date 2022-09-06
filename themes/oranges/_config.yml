@@ -133,6 +133,12 @@ colorSwitch:
 postShare:
   enable: true
 
+  weibo:
+    enable: false
+
+  qq:
+    enable: false
+
   twitter:
     enable: true
 

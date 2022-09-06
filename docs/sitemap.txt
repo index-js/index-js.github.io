@@ -1,9 +1,9 @@
 https://index-js.github.io/2021/11/02/ssh-login/
 https://index-js.github.io/404.html
-https://index-js.github.io/pages/about/index.html
-https://index-js.github.io/pages/categories/index.html
-https://index-js.github.io/pages/website/index.html
-https://index-js.github.io/pages/tags/index.html
+https://index-js.github.io/pages/about/
+https://index-js.github.io/pages/categories/
+https://index-js.github.io/pages/website/
+https://index-js.github.io/pages/tags/
 https://index-js.github.io/2021/10/25/js-date-lunar/
 https://index-js.github.io/2021/09/19/wx-login-error/
 https://index-js.github.io/2021/09/15/mobile-map-picker/
