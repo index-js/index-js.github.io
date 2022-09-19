@@ -157,10 +157,10 @@
       </div>
       <div class="markdown-body">
         <h2 id="导出备份"><a href="#导出备份" class="headerlink" title="导出备份"></a>导出备份</h2><p>mysqldump -u{root} -p{password} {database_name} &gt; backup.sql</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">--opt 默认</span><br><span class="line">--default-character-set=utf8mb4 默认格式</span><br><span class="line">-C 传输压缩</span><br><span class="line">--skip-disable-keys 避免导入重置自增ID</span><br><span class="line">--single-transaction 避免锁表</span><br><span class="line">--triggers 备份触发器</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">--opt 默认开启</span><br><span class="line">--single-transaction 避免锁表</span><br><span class="line">--compress, -C 传输压缩</span><br><span class="line">--compact 去掉头尾注释</span><br><span class="line">--default-character-set=utf8mb4 默认格式</span><br><span class="line">--triggers 备份触发器</span><br><span class="line">--complete-insert, -c 使用完整的insert语句(包含列名称)</span><br><span class="line">--no-data, -d 只导出表结构</span><br><span class="line">--verbose, -v 输出冗余信息</span><br></pre></td></tr></table></figure>
 
 <h2 id="备份恢复"><a href="#备份恢复" class="headerlink" title="备份恢复"></a>备份恢复</h2><p>mysql -h{host} -P{port} -u{root} -p{password} -C &lt; backup.sql</p>
-<h2 id="在Docker容器外执行"><a href="#在Docker容器外执行" class="headerlink" title="在Docker容器外执行"></a>在Docker容器外执行</h2><p>docker exec -i {container_name} mysql/mysqldump …</p>
+<h2 id="在Docker容器外执行"><a href="#在Docker容器外执行" class="headerlink" title="在Docker容器外执行"></a>在Docker容器外执行</h2><p>docker exec -i {container_name} mysqldump …</p>
 
       </div>
       
