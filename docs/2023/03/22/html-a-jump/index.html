@@ -11,7 +11,7 @@
   
   <title>
     
-      二代身份证18位校验 
+      网页a标签跳转 
       
       
       |
@@ -113,19 +113,25 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">二代身份证18位校验</div>
+      <div class="post-title">网页a标签跳转</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="更新时间"></i>
-          2023-03-22 15:03:00
+          2023-03-22 15:56:00
         </span>
         
               <span class="post-categories">
                 <i class="iconfont icon-bookmark" title="分类"></i>
                 
                 <span class="span--category">
-                  <a href="/categories/%E5%85%B6%E5%AE%83/" title="其它">
-                    <b>#</b> 其它
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/" title="编程">
+                    <b>#</b> 编程
+                  </a>
+                </span>
+                
+                <span class="span--category">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/H5/" title="H5">
+                    <b>#</b> H5
                   </a>
                 </span>
                 
@@ -135,8 +141,8 @@
                 <i class="iconfont icon-tags" title="标签"></i>
                 
                 <span class="span--tag">
-                  <a href="/tags/%E8%BA%AB%E4%BB%BD%E8%AF%81/" title="身份证">
-                    <b>#</b> 身份证
+                  <a href="/tags/JavaScript/" title="JavaScript">
+                    <b>#</b> JavaScript
                   </a>
                 </span>
                 
@@ -144,38 +150,34 @@
           
       </div>
       <div class="markdown-body">
-        <h2 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h2><ul>
-<li>前17位系数：7 9 10 5 8 4 2 1 6 3 7 9 10 5 8 4 2 1</li>
-<li>身份证对应位置相乘，再求和</li>
-<li>和除以11，取余</li>
-<li>余数0-10：对应1 0 X 9 8 7 6 5 4 3 2</li>
-</ul>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>假设号码：34052419800101001X<br>加权求和：21+36+0+25+16+16+2+9+48+0+0+9+0+5+0+0+2=189<br>取余结果：189%11=2<br>对应尾数：X</p>
-<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><p>正则表达式可以粗略验证格式</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第1位不能为0</span></span><br><span class="line"><span class="comment">// 第7-8位是年份，只能取19或者20</span></span><br><span class="line"><span class="comment">// 第11-12位是月份，只能取01-12</span></span><br><span class="line"><span class="comment">// 第13-14位是月份，只能取01-31</span></span><br><span class="line"><span class="comment">// 第18位可能是X</span></span><br><span class="line"></span><br><span class="line">reg = <span class="regexp">/^[1-9]\d&#123;5&#125;(19|20)\d&#123;2&#125;(0[1-9]|1[0-2])(0[1-9]|[12]\d|3([0-1]))\d&#123;3&#125;(\d|X)$/</span></span><br><span class="line">valid = reg.<span class="title function_">test</span>(<span class="string">&#x27;34052419800101001X&#x27;</span>)</span><br></pre></td></tr></table></figure>
+        <h2 id="打电话"><a href="#打电话" class="headerlink" title="打电话"></a>打电话</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;tel:10000&quot;</span>&gt;</span>中国电信<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="发邮件"><a href="#发邮件" class="headerlink" title="发邮件"></a>发邮件</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:i@yangl.in&quot;</span>&gt;</span>发邮件给我<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 带主题和内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:i@yangl.in?subject=Test&amp;body=Content&quot;</span>&gt;</span>发邮件给我(带主题和内容)<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 多个收件人 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:i@yangl.in;mail@yanglin.me&quot;</span>&gt;</span>发送<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="发短信"><a href="#发短信" class="headerlink" title="发短信"></a>发短信</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;sms:10000?body=Content&quot;</span>&gt;</span>发短信(安卓)<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;sms:10000&amp;body=Content&quot;</span>&gt;</span>发短信(iOS)<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 多个收件人 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;sms:10000,10010,10086&quot;</span>&gt;</span>发送<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-prev">
             
-              <a href="/2023/03/22/html-a-jump/" target="_self">
-                <i class="iconfont icon-chevronleft"></i>
-                <span>上一篇</span>
-              </a>
-            
           </div>
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime" title="更新时间"></i>
-              2023-03-22 15:03:00
+              2023-03-22 15:56:00
             </span>
             
                   <span class="post-categories">
                     <i class="iconfont icon-bookmark" title="分类"></i>
                     
                     <span class="span--category">
-                      <a href="/categories/%E5%85%B6%E5%AE%83/" title="其它">
-                        <b>#</b> 其它
+                      <a href="/categories/%E7%BC%96%E7%A8%8B/" title="编程">
+                        <b>#</b> 编程
+                      </a>
+                    </span>
+                    
+                    <span class="span--category">
+                      <a href="/categories/%E7%BC%96%E7%A8%8B/H5/" title="H5">
+                        <b>#</b> H5
                       </a>
                     </span>
                     
@@ -185,8 +187,8 @@
                     <i class="iconfont icon-tags" title="标签"></i>
                     
                     <span class="span--tag">
-                      <a href="/tags/%E8%BA%AB%E4%BB%BD%E8%AF%81/" title="身份证">
-                        <b>#</b> 身份证
+                      <a href="/tags/JavaScript/" title="JavaScript">
+                        <b>#</b> JavaScript
                       </a>
                     </span>
                     
@@ -195,7 +197,7 @@
           </div>
           <div class="post-foot-next">
             
-              <a href="/2021/11/02/ssh-login/" target="_self">
+              <a href="/2023/03/22/id-card-validate/" target="_self">
                 <span>下一篇</span>
                 <i class="iconfont icon-chevronright"></i>
               </a>
@@ -211,7 +213,7 @@
   <div class="post-catalog hidden" id="catalog">
     <div class="title">目录</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95"><span class="toc-text">计算方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-text">例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">正则表达式</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E7%94%B5%E8%AF%9D"><span class="toc-text">打电话</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%91%E9%82%AE%E4%BB%B6"><span class="toc-text">发邮件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%91%E7%9F%AD%E4%BF%A1"><span class="toc-text">发短信</span></a></li></ol>
     </div>
   </div>
 
@@ -350,12 +352,12 @@
         
         
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?url=https://index-js.github.io/2023/03/22/id-card-validate/&text=%E4%BA%8C%E4%BB%A3%E8%BA%AB%E4%BB%BD%E8%AF%8118%E4%BD%8D%E6%A0%A1%E9%AA%8C" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?url=https://index-js.github.io/2023/03/22/html-a-jump/&text=%E7%BD%91%E9%A1%B5a%E6%A0%87%E7%AD%BE%E8%B7%B3%E8%BD%AC" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://index-js.github.io/2023/03/22/id-card-validate/" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://index-js.github.io/2023/03/22/html-a-jump/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         

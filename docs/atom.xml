@@ -6,7 +6,7 @@
   <link href="https://index-js.github.io/atom.xml" rel="self"/>
   
   <link href="https://index-js.github.io/"/>
-  <updated>2023-03-22T07:03:00.000Z</updated>
+  <updated>2023-03-22T07:56:00.000Z</updated>
   <id>https://index-js.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网页a标签跳转</title>
+    <link href="https://index-js.github.io/2023/03/22/html-a-jump/"/>
+    <id>https://index-js.github.io/2023/03/22/html-a-jump/</id>
+    <published>2023-03-22T07:56:00.000Z</published>
+    <updated>2023-03-22T07:56:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="打电话"><a href="#打电话" class="headerlink" title="打电话"></a>打电话</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;tel:10000&quot;</span>&gt;</span>中国电信<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="发邮件"><a href="#发邮件" class="headerlink" title="发邮件"></a>发邮件</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:i@yangl.in&quot;</span>&gt;</span>发邮件给我<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 带主题和内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:i@yangl.in?subject=Test&amp;body=Content&quot;</span>&gt;</span>发邮件给我(带主题和内容)<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 多个收件人 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:i@yangl.in;mail@yanglin.me&quot;</span>&gt;</span>发送<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="发短信"><a href="#发短信" class="headerlink" title="发短信"></a>发短信</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;sms:10000?body=Content&quot;</span>&gt;</span>发短信(安卓)<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;sms:10000&amp;body=Content&quot;</span>&gt;</span>发短信(iOS)<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 多个收件人 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;sms:10000,10010,10086&quot;</span>&gt;</span>发送<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;打电话&quot;&gt;&lt;a href=&quot;#打电话&quot; class=&quot;headerlink&quot; title=&quot;打电话&quot;&gt;&lt;/a&gt;打电话&lt;/h2&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;sp</summary>
+      
+    
+    
+    
+    <category term="编程" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="H5" scheme="https://index-js.github.io/categories/%E7%BC%96%E7%A8%8B/H5/"/>
+    
+    
+    <category term="JavaScript" scheme="https://index-js.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>二代身份证18位校验</title>
