@@ -6,7 +6,7 @@
   <link href="https://index-js.github.io/atom.xml" rel="self"/>
   
   <link href="https://index-js.github.io/"/>
-  <updated>2022-08-26T06:19:44.262Z</updated>
+  <updated>2023-03-22T07:03:00.000Z</updated>
   <id>https://index-js.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二代身份证18位校验</title>
+    <link href="https://index-js.github.io/2023/03/22/id-card-validate/"/>
+    <id>https://index-js.github.io/2023/03/22/id-card-validate/</id>
+    <published>2023-03-22T07:03:00.000Z</published>
+    <updated>2023-03-22T07:03:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h2><ul><li>前17位系数：7 9 10 5 8 4 2 1 6 3 7 9 10 5 8 4 2 1</li><li>身份证对应位置相乘，再求和</li><li>和除以11，取余</li><li>余数0-10：对应1 0 X 9 8 7 6 5 4 3 2</li></ul><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>假设号码：34052419800101001X<br>加权求和：21+36+0+25+16+16+2+9+48+0+0+9+0+5+0+0+2=189<br>取余结果：189%11=2<br>对应尾数：X</p><h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><p>正则表达式可以粗略验证格式</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 第1位不能为0</span></span><br><span class="line"><span class="comment">// 第7-8位是年份，只能取19或者20</span></span><br><span class="line"><span class="comment">// 第11-12位是月份，只能取01-12</span></span><br><span class="line"><span class="comment">// 第13-14位是月份，只能取01-31</span></span><br><span class="line"><span class="comment">// 第18位可能是X</span></span><br><span class="line"></span><br><span class="line">reg = <span class="regexp">/^[1-9]\d&#123;5&#125;(19|20)\d&#123;2&#125;(0[1-9]|1[0-2])(0[1-9]|[12]\d|3([0-1]))\d&#123;3&#125;(\d|X)$/</span></span><br><span class="line">valid = reg.<span class="title function_">test</span>(<span class="string">&#x27;34052419800101001X&#x27;</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;计算方法&quot;&gt;&lt;a href=&quot;#计算方法&quot; class=&quot;headerlink&quot; title=&quot;计算方法&quot;&gt;&lt;/a&gt;计算方法&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;前17位系数：7 9 10 5 8 4 2 1 6 3 7 9 10 5 8 4 2 1&lt;/li&gt;
+&lt;li&gt;身份</summary>
+      
+    
+    
+    
+    <category term="其它" scheme="https://index-js.github.io/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+    <category term="身份证" scheme="https://index-js.github.io/tags/%E8%BA%AB%E4%BB%BD%E8%AF%81/"/>
+    
+  </entry>
   
   <entry>
     <title>SSH登录服务器</title>
