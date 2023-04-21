@@ -21,11 +21,11 @@ favicon:
   touch_icon: /static/images/favicon.ico
 
 # 用户头像与昵称
-avatar: /static/images/avatar.jpeg
+avatar: /static/images/cloud.png
 
 # CNZZ统计
 cnzz:
-  enable: true
+  enable: false
   id: 1280512941
   url: https://s9.cnzz.com/z_stat.php?id=1280512941&online=1&show=line
 
@@ -117,7 +117,7 @@ footer:
       name: Theme by Oranges | Powered by Hexo
       path: https://github.com/zchengsite/hexo-theme-oranges
     - 
-      name: 蜀ICP备2021019109号-1
+      name: 蜀ICP备2021019109号-2
       path: https://beian.miit.gov.cn/
 
 # 文章搜索
