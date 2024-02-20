@@ -17,11 +17,11 @@
 # 网站图标
 favicon:
   enable: true
-  icon: /static/images/favicon.ico
-  touch_icon: /static/images/favicon.ico
+  icon: /favicon.ico
+  touch_icon: /favicon.ico
 
 # 用户头像与昵称
-avatar: /static/images/cloud.png
+avatar: /static/images/avatar.png
 
 # CNZZ统计
 cnzz:

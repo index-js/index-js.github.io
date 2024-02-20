@@ -11,17 +11,17 @@
   
   <title>
     
-      服务器部署，Docker &amp; Vsftpd 
+      服务器部署，Docker &amp; Compose 
       
       
       |
     
-     网页开发历程
+     七六五四三二一
   </title>
 
   
-    <link rel="apple-touch-icon" href="/static/images/favicon.ico">
-    <link rel="icon" href="/static/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico">
   
 
   <!-- hexo site css -->
@@ -46,7 +46,7 @@
   html.setAttribute('color-mode', colorMode)
 </script>
 
-<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="网页开发历程" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="七六五四三二一" type="application/atom+xml">
 </head>
 
 
@@ -56,11 +56,11 @@
     <a href="/">
       <!-- 头像取消懒加载，添加no-lazy -->
       
-        <img src="/static/images/cloud.png" alt="">
+        <img src="/static/images/avatar.png" alt="">
       
     </a>
     <div class="nickname">
-      <a href="/">网页开发历程</a>
+      <a href="/">七六五四三二一</a>
     </div>
   </div>
   <div class="navbar">
@@ -113,7 +113,7 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">服务器部署，Docker & Vsftpd</div>
+      <div class="post-title">服务器部署，Docker & Compose</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime" title="更新时间"></i>
@@ -153,12 +153,6 @@
                 </span>
                 
                 <span class="span--tag">
-                  <a href="/tags/FTP/" title="FTP">
-                    <b>#</b> FTP
-                  </a>
-                </span>
-                
-                <span class="span--tag">
                   <a href="/tags/Docker-Compose/" title="Docker Compose">
                     <b>#</b> Docker Compose
                   </a>
@@ -168,17 +162,7 @@
           
       </div>
       <div class="markdown-body">
-        <h2 id="Docker-amp-Docker-Compose"><a href="#Docker-amp-Docker-Compose" class="headerlink" title="Docker &amp; Docker-Compose"></a>Docker &amp; Docker-Compose</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载Docker</span></span><br><span class="line">curl -fsSL https://get.docker.com/ | sh</span><br><span class="line"><span class="comment"># 下载最新Docker-Compose</span></span><br><span class="line">curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-`<span class="built_in">uname</span> -s`-`<span class="built_in">uname</span> -m` -o /usr/local/bin/docker-compose <span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br><span class="line"><span class="comment"># 创建目录</span></span><br><span class="line"><span class="built_in">mkdir</span> -p /home/docker</span><br><span class="line"><span class="comment"># 安装nginx / mysql / node / phpmyadmin</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Vsftpd"><a href="#Vsftpd" class="headerlink" title="Vsftpd"></a>Vsftpd</h2><ol>
-<li>apt update</li>
-<li>apt install -y vsftpd</li>
-<li>Append to /etc/vsftp.conf</li>
-<li>Add User</li>
-<li>chomd -R 777 /home/docker/nginx/html</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置ftp用户密码</span></span><br><span class="line">$ useradd -m uftp</span><br><span class="line">$ passwd uftp</span><br></pre></td></tr></table></figure>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改配置文件</span></span><br><span class="line">write_enable=YES</span><br><span class="line"></span><br><span class="line">userlist_file=/etc/vsftpd.user_list</span><br><span class="line">userlist_enable=YES</span><br><span class="line">userlist_deny=NO</span><br><span class="line"></span><br><span class="line">pasv_promiscuous=YES</span><br><span class="line">pasv_address=0.0.0.0</span><br><span class="line">local_root=/home/docker/nginx/html</span><br></pre></td></tr></table></figure>
+        <h2 id="Docker-amp-Docker-Compose"><a href="#Docker-amp-Docker-Compose" class="headerlink" title="Docker &amp; Docker-Compose"></a>Docker &amp; Docker-Compose</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载Docker</span></span><br><span class="line">curl -fsSL https://get.docker.com/ | sh</span><br><span class="line"><span class="comment"># 下载最新Docker-Compose</span></span><br><span class="line">curl -SL https://github.com/docker/compose/releases/latest/download/docker-compose-`<span class="built_in">uname</span> -s`-`<span class="built_in">uname</span> -m` -o /usr/local/bin/docker-compose</span><br><span class="line"><span class="comment"># 增加权限</span></span><br><span class="line"><span class="built_in">chmod</span> +x /usr/local/bin/docker-compose</span><br><span class="line"><span class="comment"># 创建目录</span></span><br><span class="line"><span class="built_in">mkdir</span> -p /home/docker</span><br><span class="line"><span class="comment"># 安装nginx, mysql, node...</span></span><br></pre></td></tr></table></figure>
 
       </div>
       
@@ -230,12 +214,6 @@
                     </span>
                     
                     <span class="span--tag">
-                      <a href="/tags/FTP/" title="FTP">
-                        <b>#</b> FTP
-                      </a>
-                    </span>
-                    
-                    <span class="span--tag">
                       <a href="/tags/Docker-Compose/" title="Docker Compose">
                         <b>#</b> Docker Compose
                       </a>
@@ -262,7 +240,7 @@
   <div class="post-catalog hidden" id="catalog">
     <div class="title">目录</div>
     <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-amp-Docker-Compose"><span class="toc-text">Docker &amp; Docker-Compose</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vsftpd"><span class="toc-text">Vsftpd</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-amp-Docker-Compose"><span class="toc-text">Docker &amp; Docker-Compose</span></a></li></ol>
     </div>
   </div>
 
@@ -396,7 +374,7 @@
         
         
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?url=https://index-js.github.io/2019/09/02/server-deploy/&text=%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2%EF%BC%8CDocker%20%26%20Vsftpd" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?url=https://index-js.github.io/2019/09/02/server-deploy/&text=%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%83%A8%E7%BD%B2%EF%BC%8CDocker%20%26%20Compose" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
