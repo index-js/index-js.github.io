@@ -73,7 +73,7 @@
     <link href="https://index-js.github.io/2021/11/02/ssh-login/"/>
     <id>https://index-js.github.io/2021/11/02/ssh-login/</id>
     <published>2021-11-02T03:11:00.000Z</published>
-    <updated>2022-12-16T13:05:20.376Z</updated>
+    <updated>2024-10-15T06:19:00.818Z</updated>
     
     <content type="html"><![CDATA[<h2 id="进入命令行，生成自己的公私钥"><a href="#进入命令行，生成自己的公私钥" class="headerlink" title="进入命令行，生成自己的公私钥"></a>进入命令行，生成自己的公私钥</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br><span class="line"></span><br><span class="line"><span class="comment"># Linux在~/.ssh目录下，Windows在C盘根目录</span></span><br><span class="line"><span class="comment"># 目录结构如下</span></span><br><span class="line">-- .ssh</span><br><span class="line">  |-- id_rsa</span><br><span class="line">  |-- id_rsa.pub</span><br></pre></td></tr></table></figure><h2 id="连接服务器，设置访问凭证"><a href="#连接服务器，设置访问凭证" class="headerlink" title="连接服务器，设置访问凭证"></a>连接服务器，设置访问凭证</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将公钥传到服务器，追加到~/.ssh/authorized_keys文件里</span></span><br><span class="line"><span class="built_in">cat</span> id_dsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>]]></content>
     
